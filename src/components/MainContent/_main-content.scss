@@ -1,0 +1,32 @@
+@import '@carbon/type/scss/font-family';
+
+@font-face {
+    font-family: 'IBM Plex Serif SemiBold';
+    src: url('../../assets/fonts/IBMPlexSerif-SemiBold.ttf') format('truetype')
+}
+.main-content {
+    text-align: center;
+    padding-top: $layout-07;
+
+    p {
+        font-family: 'IBM Plex Serif SemiBold';
+        font-size: 3.5vw;
+        color: #2e85ff;
+        line-height: 1.6em;
+
+        @media screen and (max-width: 870px) {
+            font-size: 2.2em;
+            padding-left: $spacing-08;
+            padding-right: $spacing-08;
+        }
+    }
+}
+
+
+// @media screen and (max-width: 870px) {
+//     .main-content p {
+//         font-size: 2.2em;
+//         padding-left: $spacing-08;
+//         padding-right: $spacing-08;
+//     }
+// }

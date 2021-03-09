@@ -1,0 +1,10 @@
+@import "carbon-components/scss/globals/scss/vendor/@carbon/type/scss/font-family.scss";
+@import "carbon-components/scss/globals/scss/vendor/@carbon/layout/scss/breakpoint.scss";
+@import "carbon-components/scss/globals/scss/typography.scss";
+@import "carbon-components/scss/globals/scss/vars.scss";
+@import "carbon-components/scss/globals/scss/spacing.scss";
+
+@import "./components/HeaderBar/header-bar.scss";
+@import "./components/MainContent/main-content.scss";
+@import "./components/FooterContent/footer-content.scss";
+@import "./views/Home/home.scss";

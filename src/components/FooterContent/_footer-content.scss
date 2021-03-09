@@ -1,0 +1,29 @@
+.footer-content {
+    text-align: center;
+    padding-top: $layout-07;
+
+    svg {
+        height: 32px;
+        fill: #212121;
+
+        // When bigger than this, don't show social icons
+        @media screen and (min-width: 870px) {
+            display: none;
+        }
+    }
+
+    .link-text {
+        display: inline-block;
+        font-family: Helvetica;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 1.2em;
+        color: #212121;
+        text-decoration: none;
+
+        // When smaller than this, don't show link text
+        @media screen and (max-width: 870px) {
+            display: none;
+        }
+    }
+}
