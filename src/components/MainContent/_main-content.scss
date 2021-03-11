@@ -55,13 +55,13 @@
 
         .main-text {
             font-size: 2.2em;
-            padding-left: $spacing-08;
-            padding-right: $spacing-08;
+            padding-left: $spacing-07;
+            padding-right: $spacing-07;
 
             &:before,
             &:after {
-                padding-left: $spacing-08;
-                padding-right: $spacing-08;
+                padding-left: $spacing-07;
+                padding-right: $spacing-07;
             }
         }
     }
