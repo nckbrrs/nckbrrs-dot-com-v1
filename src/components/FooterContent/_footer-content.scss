@@ -5,11 +5,6 @@
     svg {
         height: 32px;
         fill: #212121;
-
-        // When bigger than this, don't show social icons
-        @media screen and (min-width: 870px) {
-            display: none;
-        }
     }
 
     .link-text {
@@ -20,10 +15,21 @@
         font-size: 1.2em;
         color: #212121;
         text-decoration: none;
+    }
+}
 
-        // When smaller than this, don't show link text
-        @media screen and (max-width: 870px) {
+@media screen and (max-width: 870px) {
+    .footer-content {
+        padding-top: $layout-06;
+
+        .link-text {
             display: none;
         }
+    }
+}
+
+@media screen and (min-width: 870px) {
+    .footer-content svg {
+        display: none
     }
 }

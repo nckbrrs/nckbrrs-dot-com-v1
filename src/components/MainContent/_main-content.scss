@@ -25,11 +25,6 @@
             left: 0;
             right: 0;
             bottom: 0;
-
-            @media screen and (max-width: 870px) {
-                padding-left: $spacing-08;
-                padding-right: $spacing-08;
-            }
         }
 
         &:before {
@@ -44,32 +39,35 @@
 
         &:hover {
             &:before {
-                animation: glitchy 1.5s ease 1s infinite;
+                animation: glitch 1.5s ease 1s infinite;
             }
             
             &:after {
-                animation: glitchy 2s ease infinite reverse;
+                animation: glitch 2s ease infinite reverse;
             }
-        }
-
-        @media screen and (max-width: 870px) {
-            font-size: 2.2em;
-            padding-left: $spacing-08;
-            padding-right: $spacing-08;
         }
     }
 }
 
+@media screen and (max-width: 870px) {
+    .main-content {
+        padding-top: $layout-06;
 
-// @media screen and (max-width: 870px) {
-//     .main-content p {
-//         font-size: 2.2em;
-//         padding-left: $spacing-08;
-//         padding-right: $spacing-08;
-//     }
-// }
+        .main-text {
+            font-size: 2.2em;
+            padding-left: $spacing-08;
+            padding-right: $spacing-08;
 
-@keyframes glitchy {
+            &:before,
+            &:after {
+                padding-left: $spacing-08;
+                padding-right: $spacing-08;
+            }
+        }
+    }
+}
+
+@keyframes glitch {
     0%   {transform: translate(-2px, 2px);}
     25%  {transform: translate(-2px, -2px);}
     50%  {transform: translate(2px, 2px);}
