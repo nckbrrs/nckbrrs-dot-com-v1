@@ -9,8 +9,7 @@ class Home extends React.Component<{}, {}> {
       <div className="bx--grid bx--grid--full-width">
         <HeaderBar />
         <MainContent
-          //text="...is a software developer and musician living and working in Raleigh."
-          text="...is under construction"
+          text="...is a software developer and musician living and working in Raleigh."
         />
         <FooterContent />
       </div>

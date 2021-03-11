@@ -10,7 +10,7 @@ class MainContent extends React.Component<MainContentProps, {}> {
     return (
       <div className="bx--row main-content">
         <div className="bx--offset-lg-1 bx--col">
-            <p>{this.props.text}</p>
+            <div className="main-text" data-content={this.props.text}>{this.props.text}</div>
         </div>
         <div className="bx--col-lg-1"/>
       </div>

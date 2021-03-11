@@ -8,11 +8,49 @@
     text-align: center;
     padding-top: $layout-07;
 
-    p {
+    .main-text {
         font-family: 'IBM Plex Serif SemiBold';
         font-size: 3.5vw;
         color: #2e85ff;
         line-height: 1.6em;
+        position: relative;
+        display: inline-block;
+        z-index: 1;
+
+        &:before,
+        &:after {
+            content:attr(data-content);
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+
+            @media screen and (max-width: 870px) {
+                padding-left: $spacing-08;
+                padding-right: $spacing-08;
+            }
+        }
+
+        &:before {
+            color: #00ffaa;
+            z-index: -1;
+        }
+    
+        &:after {
+            color: #ff6622;
+            z-index: -2;
+        }
+
+        &:hover {
+            &:before {
+                animation: glitchy 1.5s ease 1s infinite;
+            }
+            
+            &:after {
+                animation: glitchy 2s ease infinite reverse;
+            }
+        }
 
         @media screen and (max-width: 870px) {
             font-size: 2.2em;
@@ -30,3 +68,11 @@
 //         padding-right: $spacing-08;
 //     }
 // }
+
+@keyframes glitchy {
+    0%   {transform: translate(-2px, 2px);}
+    25%  {transform: translate(-2px, -2px);}
+    50%  {transform: translate(2px, 2px);}
+    75%  {transform: translate(2px, -2px);}
+    100%  {transform: translate(-2px, 2px);}
+}
