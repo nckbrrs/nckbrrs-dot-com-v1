@@ -1,6 +1,5 @@
 .footer-content {
     text-align: center;
-    padding-top: $layout-07;
 
     svg {
         height: 32px;
@@ -19,17 +18,19 @@
 }
 
 @media screen and (max-width: 870px) {
-    .footer-content {
-        padding-top: $layout-06;
-
-        .link-text {
-            display: none;
-        }
+    .footer-content .link-text {
+        display: none;
     }
 }
 
 @media screen and (min-width: 870px) {
     .footer-content svg {
         display: none
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .footer-content svg {
+        height: 24px;
     }
 }

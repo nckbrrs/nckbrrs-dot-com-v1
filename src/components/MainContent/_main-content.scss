@@ -7,6 +7,7 @@
 .main-content {
     text-align: center;
     padding-top: $layout-07;
+    padding-bottom: $layout-07;
 
     .main-text {
         font-family: 'IBM Plex Serif SemiBold';
@@ -50,22 +51,39 @@
 }
 
 @media screen and (max-width: 870px) {
-    .main-content {
-        padding-top: $layout-06;
+    .main-content .main-text {
+        font-size: 2.2em;
+        padding-left: $spacing-07;
+        padding-right: $spacing-07;
 
-        .main-text {
-            font-size: 2.2em;
+        &:before,
+        &:after {
             padding-left: $spacing-07;
             padding-right: $spacing-07;
-
-            &:before,
-            &:after {
-                padding-left: $spacing-07;
-                padding-right: $spacing-07;
-            }
         }
     }
 }
+
+@media screen and (max-width: 600px) {
+    .main-content {
+        padding-top: $layout-06;
+        padding-bottom: $layout-06;
+
+        .main-text {
+            font-size: 1.5em;
+            padding-left: $spacing-04;
+            padding-right: $spacing-04;
+
+            &:before,
+            &:after {
+                padding-left: $spacing-04;
+                padding-right: $spacing-04;
+            }
+        }
+    }
+
+}
+
 
 @keyframes glitch {
     0%   {transform: translate(-2px, 2px);}
