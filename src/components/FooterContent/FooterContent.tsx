@@ -8,7 +8,8 @@ import InstagramIcon from '../../assets/icons/Instagram';
 import LinkedinIcon from '../../assets/icons/Linkedin';
 import SpotifyIcon from '../../assets/icons/Spotify';
 import YoutubeIcon from '../../assets/icons/Youtube';
-
+import ResumeIcon from '../../assets/icons/Resume';
+import ResumePDF from '../../assets/resume/resume.pdf';
 
 class FooterContent extends React.Component<{}, {}> {
   render() {
@@ -53,6 +54,11 @@ class FooterContent extends React.Component<{}, {}> {
           <a href="mailto:nckbrrs@gmail.com">
             <div className="link-text">CONTACT</div>
             <EmailIcon/>
+          </a>
+          <span>&nbsp;&nbsp;&nbsp;</span>
+          <a href={ResumePDF}>
+            <div className="link-text">RESUME</div>
+            <ResumeIcon/>
           </a>
         </div>
       </div>
