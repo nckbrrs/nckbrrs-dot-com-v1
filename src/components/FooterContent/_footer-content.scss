@@ -1,36 +1,50 @@
 .footer-content {
     text-align: center;
 
-    svg {
-        height: 32px;
-        fill: #212121;
-    }
+    #links {
+        display: inline-flex;
+    
+        svg {
+            height: 32px;
+            fill: #212121;
+        }
+    
+        .link-text {
+            display: inline-block;
+            font-family: Helvetica;
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: 1.2em;
+            color: #212121;
+            text-decoration: none;
+        }
 
-    .link-text {
-        display: inline-block;
-        font-family: Helvetica;
-        text-transform: uppercase;
-        font-weight: 700;
-        font-size: 1.2em;
-        color: #212121;
-        text-decoration: none;
+        &:hover {
+            .link-text:not(:hover) {
+                opacity: 0.3;
+            }
+    
+            svg:not(:hover) {
+                opacity: 0.3;
+            }
+        }
     }
 }
 
 @media screen and (max-width: 1000px) {
-    .footer-content .link-text {
+    .footer-content #links .link-text {
         display: none;
     }
 }
 
 @media screen and (min-width: 1000px) {
-    .footer-content svg {
+    .footer-content #links svg {
         display: none
     }
 }
 
 @media screen and (max-width: 600px) {
-    .footer-content svg {
+    .footer-content #links svg {
         height: 24px;
     }
 }
