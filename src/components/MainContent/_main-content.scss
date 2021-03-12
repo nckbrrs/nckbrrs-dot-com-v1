@@ -18,35 +18,28 @@
         display: inline-block;
         z-index: 1;
 
-        &:before,
-        &:after {
+        &:before, &:after {
             content:attr(data-content);
             position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
+            top: 0; left: 0; right: 0; bottom: 0;
+            --g: 2;
         }
 
         &:before {
             color: #00ffaa;
             z-index: -1;
+            animation: glitch 1.5s ease 1s infinite;
         }
     
         &:after {
             color: #ff6622;
             z-index: -2;
+            animation: glitch 2s ease infinite reverse;
         }
 
         &:hover {
-            &:before {
-                --g: 2;
-                animation: glitch 1.5s ease 1s infinite;
-            }
-            
-            &:after {
-                --g: 2;
-                animation: glitch 2s ease infinite reverse;
+            &:before, &:after {
+                animation: none;
             }
         }
     }
@@ -58,8 +51,7 @@
         padding-left: $spacing-07;
         padding-right: $spacing-07;
 
-        &:before,
-        &:after {
+        &:before, &:after {
             padding-left: $spacing-07;
             padding-right: $spacing-07;
         }
@@ -76,22 +68,18 @@
             padding-left: $spacing-04;
             padding-right: $spacing-04;
 
-            &:before,
-            &:after {
+            &:before, &:after {
                 padding-left: $spacing-04;
                 padding-right: $spacing-04;
+                --g: 1;
             }
 
-            &:hover {
-                &:before {
-                    --g: 1;
-                    animation: glitch 1.5s ease 1s infinite;
-                }
+            &:before {
+                animation: glitch 1.5s ease 1s infinite;
+            }
                 
-                &:after {
-                    --g: 1;
-                    animation: glitch 2s ease infinite reverse;
-                }
+            &:after {
+                animation: glitch 2s ease infinite reverse;
             }
         }
     }
