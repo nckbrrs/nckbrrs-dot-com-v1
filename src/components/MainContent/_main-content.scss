@@ -40,10 +40,12 @@
 
         &:hover {
             &:before {
+                --g: 2;
                 animation: glitch 1.5s ease 1s infinite;
             }
             
             &:after {
+                --g: 2;
                 animation: glitch 2s ease infinite reverse;
             }
         }
@@ -79,16 +81,27 @@
                 padding-left: $spacing-04;
                 padding-right: $spacing-04;
             }
+
+            &:hover {
+                &:before {
+                    --g: 1;
+                    animation: glitch 1.5s ease 1s infinite;
+                }
+                
+                &:after {
+                    --g: 1;
+                    animation: glitch 2s ease infinite reverse;
+                }
+            }
         }
     }
 
 }
 
-
 @keyframes glitch {
-    0%   {transform: translate(-2px, 2px);}
-    25%  {transform: translate(-2px, -2px);}
-    50%  {transform: translate(2px, 2px);}
-    75%  {transform: translate(2px, -2px);}
-    100%  {transform: translate(-2px, 2px);}
+    0%   {transform: translate(calc(var(--g) * -1px), calc(var(--g) * 1px));}
+    25%  {transform: translate(calc(var(--g) * -1px), calc(var(--g) * -1px));}
+    50%  {transform: translate(calc(var(--g) * 1px), calc(var(--g) * 1px));}
+    75%  {transform: translate(calc(var(--g) * 1px), calc(var(--g) * -1px));}
+    100% {transform: translate(calc(var(--g) * -1px), calc(var(--g) * 1px));}
 }
