@@ -3,6 +3,11 @@
 
     #links {
         display: inline-flex;
+
+        a {
+            padding-left: $spacing-03;
+            padding-right: $spacing-03;
+        }
     
         svg {
             height: 32px;
@@ -31,20 +36,29 @@
     }
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1100px) {
     .footer-content #links .link-text {
         display: none;
     }
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1100px) {
     .footer-content #links svg {
         display: none
     }
 }
 
 @media screen and (max-width: 600px) {
-    .footer-content #links svg {
-        height: 24px;
+    .footer-content {
+        #links {
+            a {
+                padding-left: $spacing-02;
+                padding-right: $spacing-02;
+            }
+
+            svg {
+                height: 24px;
+            }
+        }
     }
 }
