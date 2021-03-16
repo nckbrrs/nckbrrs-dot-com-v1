@@ -1,4 +1,4 @@
-.footer-content {
+.footer {
     text-align: center;
 
     #links {
@@ -37,19 +37,19 @@
 }
 
 @media screen and (max-width: 1100px) {
-    .footer-content #links .link-text {
+    .footer #links .link-text {
         display: none;
     }
 }
 
 @media screen and (min-width: 1100px) {
-    .footer-content #links svg {
+    .footer #links svg {
         display: none
     }
 }
 
 @media screen and (max-width: 600px) {
-    .footer-content {
+    .footer {
         #links {
             a {
                 padding-left: $spacing-02;

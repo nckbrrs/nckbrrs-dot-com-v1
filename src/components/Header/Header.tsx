@@ -1,7 +1,7 @@
 import React from "react";
 import "react-dom";
 
-class HeaderBar extends React.Component<{}, {}> {
+class Header extends React.Component<{}, {}> {
   render() {
     return (
       <div className="bx--row">
@@ -13,4 +13,4 @@ class HeaderBar extends React.Component<{}, {}> {
   }
 }
 
-export default HeaderBar;
+export default Header;

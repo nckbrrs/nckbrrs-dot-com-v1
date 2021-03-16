@@ -1,11 +1,11 @@
 import React from "react";
 import "react-dom";
 
-interface MainContentProps {
+interface MainProps {
   text: string
 }
 
-class MainContent extends React.Component<MainContentProps, {}> {
+class Main extends React.Component<MainProps, {}> {
   render() {
     return (
       <div className="bx--row main-content">
@@ -18,4 +18,4 @@ class MainContent extends React.Component<MainContentProps, {}> {
   }
 }
 
-export default MainContent;
+export default Main;
