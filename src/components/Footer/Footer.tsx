@@ -1,6 +1,6 @@
 import React from "react";
 import "react-dom";
-import { socialLinkData } from '../../assets/socialLinkData';
+import { contentConfig } from '../../assets/contentConfig';
 
 class Footer extends React.Component<{}, {}> {
   render() {
@@ -9,7 +9,7 @@ class Footer extends React.Component<{}, {}> {
         <div className="bx--col">
           <div id="links">
             {
-              socialLinkData.map((link) =>  {
+              contentConfig.socialLinks.map((link) =>  {
                 return (
                   <a href={link['href']}>
                     <div className="link-text">{link['text']}</div>
