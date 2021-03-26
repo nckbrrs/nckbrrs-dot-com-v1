@@ -28,7 +28,7 @@
         &:before {
             color: #00ffaa;
             z-index: -1;
-            animation: glitch 1.5s ease 1s infinite;
+            animation: glitch 2s ease infinite;
         }
     
         &:after {
@@ -39,7 +39,7 @@
 
         &:hover {
             &:before, &:after {
-                animation: none;
+                animation-play-state: paused;
             }
         }
     }
