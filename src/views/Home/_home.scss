@@ -1,3 +1,15 @@
 body {
     background-color: #fffdf6 !important;
+    animation: fadeIn 2s, slideInFromBelow 1s ease;
+}
+
+
+@keyframes fadeIn {
+    0%   {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@keyframes slideInFromBelow {
+    0%   {transform: translate(0px, 60px);}
+    100% {transform: translate(0px, 0px);}
 }

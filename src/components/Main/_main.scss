@@ -36,12 +36,6 @@
             z-index: -2;
             animation: glitch 2s ease infinite reverse;
         }
-
-        &:hover {
-            &:before, &:after {
-                animation-play-state: paused;
-            }
-        }
     }
 }
 
