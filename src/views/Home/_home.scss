@@ -1,6 +1,6 @@
 body {
     background-color: #fffdf6 !important;
-    animation: fadeIn 2s, slideInFromBelow 1s ease;
+    animation: fadeIn 2s, slideInFromBelow 1s
 }
 
 
@@ -11,5 +11,6 @@ body {
 
 @keyframes slideInFromBelow {
     0%   {transform: translate(0px, 60px);}
+    60% {transform: translate(0px, -15px);}
     100% {transform: translate(0px, 0px);}
 }
