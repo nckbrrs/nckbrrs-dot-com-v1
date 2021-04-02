@@ -63,7 +63,7 @@ class Footer extends React.Component<{}, FooterState> {
     if (this.state.currentWidth < 600) {
       classNames.push("small");
     }
-    else if (this.state.currentWidth < 1100) {
+    else if (this.state.currentWidth < 1200) {
       classNames.push("medium");
     }
 
