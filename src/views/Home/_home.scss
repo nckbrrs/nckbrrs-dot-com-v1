@@ -1,6 +1,23 @@
 #home {
-    background-color: #fffdf6 !important;
-    animation: fadeIn 2s, slideInFromBelow 1s
+    background: #fffdf6 !important;
+    animation: fadeIn 2s, slideInFromBelow 1s;
+
+    #main-content {
+        text-align: center;
+        font-size: 3.5vw;
+
+        &.medium #main-text{
+            font-size: 2.2rem;
+        }
+
+        &.small #main-text{
+            font-size: 1.5rem;
+        }
+    }
+
+    #footer {
+        text-align: center;
+    }
 }
 
 @keyframes fadeIn {
@@ -10,6 +27,6 @@
 
 @keyframes slideInFromBelow {
     0%   {transform: translate(0px, 60px);}
-    60% {transform: translate(0px, -15px);}
+    60%  {transform: translate(0px, -15px);}
     100% {transform: translate(0px, 0px);}
 }

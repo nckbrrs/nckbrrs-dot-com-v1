@@ -1,6 +1,4 @@
-.footer {
-    text-align: center;
-
+#footer {
     #links {
         display: inline-flex;
 
@@ -34,31 +32,33 @@
             }
         }
     }
-}
 
-@media screen and (max-width: 1100px) {
-    .footer #links .link-text {
-        display: none;
-    }
-}
-
-@media screen and (min-width: 1100px) {
-    .footer #links svg {
-        display: none
-    }
-}
-
-@media screen and (max-width: 600px) {
-    .footer {
+    &.small {
         #links {
             a {
                 padding-left: $spacing-02;
                 padding-right: $spacing-02;
             }
 
+            .link-text {
+                display: none;
+            }
+
             svg {
                 height: 24px;
             }
+        }
+    }
+
+    &.medium {
+        #links .link-text {
+            display: none;
+        }
+    }
+
+    &:not(.small):not(.medium) {
+        #links svg {
+            display: none
         }
     }
 }

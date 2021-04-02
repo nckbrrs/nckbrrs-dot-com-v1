@@ -37,10 +37,11 @@ class Main extends React.Component<{}, MainState> {
   }
 
   render() {
+    console.log(this.state.currentWidth);
     return (
       <div id="main-content" className={this.mainContentClassNames()}>
         <div className="bx--offset-lg-1 bx--col">
-          <div id="main-text" className={this.mainTextClassNames()} data-content={contentConfig.mainText}>
+          <div id="main-text" data-content={contentConfig.mainText}>
             {contentConfig.mainText}
           </div>
         </div>
@@ -53,25 +54,15 @@ class Main extends React.Component<{}, MainState> {
     let classNames = ["bx--row"];
 
     if (this.state.currentWidth < 600) {
+      console.log("small");
       classNames.push("small");
     }
     else if (this.state.currentWidth < 870) {
+      console.log("medium")
       classNames.push("medium");
     }
 
     return classNames.join(" ");
-  }
-
-  mainTextClassNames() {
-    if (this.state.currentWidth < 600) {
-      return "small";
-    }
-    else if (this.state.currentWidth < 870) {
-      return "medium";
-    }
-    else {
-      return "";
-    }
   }
 }
 

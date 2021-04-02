@@ -6,18 +6,11 @@
 }
 
 #main-content {
-    text-align: center;
     padding-top: $layout-07;
     padding-bottom: $layout-07;
 
-    &.small {
-        padding-top: $layout-06;
-        padding-bottom: $layout-06;
-    }
-
     #main-text {
         font-family: 'IBM Plex Serif SemiBold';
-        font-size: 3.5vw;
         color: #2e85ff;
         line-height: 1.6em;
         position: relative;
@@ -42,9 +35,25 @@
             z-index: -2;
             animation: glitch 2s ease infinite reverse;
         }
+    }
 
-        &.small {
-            font-size: 1.5em;
+    &.medium {
+        #main-text {
+            padding-left: $spacing-07;
+            padding-right: $spacing-07;
+
+            &:before, &:after {
+                padding-left: $spacing-07;
+                padding-right: $spacing-07;
+            }
+        }
+    }
+
+    &.small {
+        padding-top: $layout-06;
+        padding-bottom: $layout-06;
+
+        #main-text {
             padding-left: $spacing-04;
             padding-right: $spacing-04;
 
@@ -52,25 +61,6 @@
                 padding-left: $spacing-04;
                 padding-right: $spacing-04;
                 --g: 1;
-            }
-
-            &:before {
-                animation: glitch 1.5s ease 1s infinite;
-            }
-                
-            &:after {
-                animation: glitch 2s ease infinite reverse;
-            }
-        }
-
-        &.medium {
-            font-size: 2.2em;
-            padding-left: $spacing-07;
-            padding-right: $spacing-07;
-
-            &:before, &:after {
-                padding-left: $spacing-07;
-                padding-right: $spacing-07;
             }
         }
     }
