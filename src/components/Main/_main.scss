@@ -4,12 +4,18 @@
     font-family: 'IBM Plex Serif SemiBold';
     src: url('../../assets/fonts/IBMPlexSerif-SemiBold.ttf') format('truetype')
 }
-.main-content {
+
+#main-content {
     text-align: center;
     padding-top: $layout-07;
     padding-bottom: $layout-07;
 
-    .main-text {
+    &.small {
+        padding-top: $layout-06;
+        padding-bottom: $layout-06;
+    }
+
+    #main-text {
         font-family: 'IBM Plex Serif SemiBold';
         font-size: 3.5vw;
         color: #2e85ff;
@@ -36,28 +42,8 @@
             z-index: -2;
             animation: glitch 2s ease infinite reverse;
         }
-    }
-}
 
-@media screen and (max-width: 870px) {
-    .main-content .main-text {
-        font-size: 2.2em;
-        padding-left: $spacing-07;
-        padding-right: $spacing-07;
-
-        &:before, &:after {
-            padding-left: $spacing-07;
-            padding-right: $spacing-07;
-        }
-    }
-}
-
-@media screen and (max-width: 600px) {
-    .main-content {
-        padding-top: $layout-06;
-        padding-bottom: $layout-06;
-
-        .main-text {
+        &.small {
             font-size: 1.5em;
             padding-left: $spacing-04;
             padding-right: $spacing-04;
@@ -76,8 +62,18 @@
                 animation: glitch 2s ease infinite reverse;
             }
         }
-    }
 
+        &.medium {
+            font-size: 2.2em;
+            padding-left: $spacing-07;
+            padding-right: $spacing-07;
+
+            &:before, &:after {
+                padding-left: $spacing-07;
+                padding-right: $spacing-07;
+            }
+        }
+    }
 }
 
 @keyframes glitch {
