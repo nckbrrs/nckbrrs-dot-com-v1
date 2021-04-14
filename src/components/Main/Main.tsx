@@ -1,12 +1,16 @@
 import React from "react";
 import "react-dom";
-import { contentConfig } from '../../assets/contentConfig';
+import { contentConfig } from '../../config/contentConfig';
+
+interface MainProps {
+  page: string;
+}
 
 interface MainState {
   currentWidth: number;
 }
 
-class Main extends React.Component<{}, MainState> {
+class Main extends React.Component<MainProps, MainState> {
   constructor(props) {
     super(props);
     this.updateWidth = this.updateWidth.bind(this);
@@ -41,8 +45,8 @@ class Main extends React.Component<{}, MainState> {
     return (
       <div id="main-content" className={this.mainContentClassNames()}>
         <div className="bx--offset-lg-1 bx--col">
-          <div id="main-text" data-content={contentConfig.mainText}>
-            {contentConfig.mainText}
+          <div id="main-text" data-content={contentConfig[this.props.page].mainText}>
+            {contentConfig[this.props.page].mainText}
           </div>
         </div>
         <div className="bx--col-lg-1"/>

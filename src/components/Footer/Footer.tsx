@@ -1,12 +1,16 @@
 import React from "react";
 import "react-dom";
-import { contentConfig } from '../../assets/contentConfig';
+import { contentConfig } from '../../config/contentConfig';
+
+interface FooterProps {
+  page: string
+}
 
 interface FooterState {
   currentWidth: number;
 }
 
-class Footer extends React.Component<{}, FooterState> {
+class Footer extends React.Component<FooterProps, FooterState> {
   constructor(props) {
     super(props);
     this.updateWidth = this.updateWidth.bind(this);
@@ -42,7 +46,7 @@ class Footer extends React.Component<{}, FooterState> {
         <div className="bx--col">
           <div id="links">
             {
-              contentConfig.socialLinks.map((link) =>  {
+              contentConfig[this.props.page].socialLinks.map((link) =>  {
                 return (
                   <a href={link['href']}>
                     <div className="link-text">{link['text']}</div>

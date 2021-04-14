@@ -21,19 +21,19 @@
             content:attr(data-content);
             position: absolute;
             top: 0; left: 0; right: 0; bottom: 0;
-            --g: 2;
+            --g: 1;
         }
 
         &:before {
             color: #00ffaa;
             z-index: -1;
-            animation: glitch 2s ease infinite;
+            animation: circle 3s linear 0.5s infinite;
         }
     
         &:after {
             color: #ff6622;
             z-index: -2;
-            animation: glitch 2s ease infinite reverse;
+            animation: circle 3s linear infinite;
         }
     }
 
@@ -60,10 +60,22 @@
             &:before, &:after {
                 padding-left: $spacing-04;
                 padding-right: $spacing-04;
-                --g: 1;
+                --g: 2;
             }
         }
     }
+}
+
+@keyframes circle {
+    0%   {transform: translate(calc(var(--g) * -1px), calc(var(--g) * 1px));}
+    13%  {transform: translate(calc(var(--g) * -1.5px), calc(var(--g) * 0px));}
+    25%  {transform: translate(calc(var(--g) * -1px), calc(var(--g) * -1px));}
+    38%  {transform: translate(calc(var(--g) * 0px), calc(var(--g) * -1.5px));}
+    50%  {transform: translate(calc(var(--g) * 1px), calc(var(--g) * -1px));}
+    63%  {transform: translate(calc(var(--g) * 1.5px), calc(var(--g) * 0px));}
+    75%  {transform: translate(calc(var(--g) * 1px), calc(var(--g) * 1px));}
+    88%  {transform: translate(calc(var(--g) * 0px), calc(var(--g) * 1.5px));}
+    100% {transform: translate(calc(var(--g) * -1px), calc(var(--g) * 1px));}
 }
 
 @keyframes glitch {

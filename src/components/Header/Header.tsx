@@ -1,13 +1,17 @@
 import React from "react";
 import "react-dom";
-import { contentConfig } from '../../assets/contentConfig';
+import { contentConfig } from '../../config/contentConfig';
 
-class Header extends React.Component<{}, {}> {
+interface HeaderProps {
+  page: string
+}
+
+class Header extends React.Component<HeaderProps, {}> {
   render() {
     return (
       <div className="bx--row">
         <div className="bx--col">
-          <h1 className="header-text">{contentConfig.headerText}</h1>
+          <h1 className="header-text">{contentConfig[this.props.page].headerText}</h1>
         </div>
       </div>
     );

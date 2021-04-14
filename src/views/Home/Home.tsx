@@ -7,9 +7,9 @@ class Home extends React.Component<{}, {}> {
   render() {
     return (
       <div id="home" className="bx--grid bx--grid--full-width">
-        <Header/>
-        <Main/>
-        <Footer/>
+        <Header page="home"/>
+        <Main page="home"/>
+        <Footer page="home"/>
       </div>
     )
   }
