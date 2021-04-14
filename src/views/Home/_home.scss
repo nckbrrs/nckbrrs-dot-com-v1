@@ -5,28 +5,32 @@
     #main-content {
         text-align: center;
         font-size: 3.5vw;
+        padding-top: $layout-07;
+        padding-bottom: $layout-07;
+        --translateCircleSize: 2;
 
-        &.medium #main-text{
+        &.medium {
             font-size: 2.2rem;
+
+            #main-text, #main-text:before, #main-text:after {
+                padding-left: $spacing-07;
+                padding-right: $spacing-07;
+            }
         }
 
-        &.small #main-text{
+        &.small {
             font-size: 1.5rem;
+            padding-top: $layout-06;
+            padding-bottom: $layout-06;
+
+            #main-text, #main-text:before, #main-text:after {
+                padding-left: $spacing-04;
+                padding-right: $spacing-04;
+            }
         }
     }
 
     #footer {
         text-align: center;
     }
-}
-
-@keyframes fadeIn {
-    0%   {opacity: 0;}
-    100% {opacity: 1;}
-}
-
-@keyframes slideInFromBelow {
-    0%   {transform: translate(0px, 60px);}
-    60%  {transform: translate(0px, -15px);}
-    100% {transform: translate(0px, 0px);}
 }

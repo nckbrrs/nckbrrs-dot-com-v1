@@ -1,87 +1,28 @@
-@import '@carbon/type/scss/font-family';
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@600&display=swap');
 
-@font-face {
-    font-family: 'IBM Plex Serif SemiBold';
-    src: url('../../assets/fonts/IBMPlexSerif-SemiBold.ttf') format('truetype')
-}
+#main-text {
+    font-family: 'IBM Plex Serif', serif;
+    color: #2e85ff;
+    line-height: 1.6em;
+    position: relative;
+    display: inline-block;
+    z-index: 1;
 
-#main-content {
-    padding-top: $layout-07;
-    padding-bottom: $layout-07;
-
-    #main-text {
-        font-family: 'IBM Plex Serif SemiBold';
-        color: #2e85ff;
-        line-height: 1.6em;
-        position: relative;
-        display: inline-block;
-        z-index: 1;
-
-        &:before, &:after {
-            content:attr(data-content);
-            position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            --g: 1;
-        }
-
-        &:before {
-            color: #00ffaa;
-            z-index: -1;
-            animation: circle 3s linear 0.5s infinite;
-        }
-    
-        &:after {
-            color: #ff6622;
-            z-index: -2;
-            animation: circle 3s linear infinite;
-        }
+    &:before, &:after {
+        content:attr(data-content);
+        position: absolute;
+        top: 0; left: 0; right: 0; bottom: 0;
     }
 
-    &.medium {
-        #main-text {
-            padding-left: $spacing-07;
-            padding-right: $spacing-07;
-
-            &:before, &:after {
-                padding-left: $spacing-07;
-                padding-right: $spacing-07;
-            }
-        }
+    &:before {
+        color: #00ffaa;
+        z-index: -1;
+        animation: translateCircle 3s linear 0.5s infinite;
     }
 
-    &.small {
-        padding-top: $layout-06;
-        padding-bottom: $layout-06;
-
-        #main-text {
-            padding-left: $spacing-04;
-            padding-right: $spacing-04;
-
-            &:before, &:after {
-                padding-left: $spacing-04;
-                padding-right: $spacing-04;
-                --g: 2;
-            }
-        }
+    &:after {
+        color: #ff6622;
+        z-index: -2;
+        animation: translateCircle 3s linear infinite;
     }
-}
-
-@keyframes circle {
-    0%   {transform: translate(calc(var(--g) * -1px), calc(var(--g) * 1px));}
-    13%  {transform: translate(calc(var(--g) * -1.5px), calc(var(--g) * 0px));}
-    25%  {transform: translate(calc(var(--g) * -1px), calc(var(--g) * -1px));}
-    38%  {transform: translate(calc(var(--g) * 0px), calc(var(--g) * -1.5px));}
-    50%  {transform: translate(calc(var(--g) * 1px), calc(var(--g) * -1px));}
-    63%  {transform: translate(calc(var(--g) * 1.5px), calc(var(--g) * 0px));}
-    75%  {transform: translate(calc(var(--g) * 1px), calc(var(--g) * 1px));}
-    88%  {transform: translate(calc(var(--g) * 0px), calc(var(--g) * 1.5px));}
-    100% {transform: translate(calc(var(--g) * -1px), calc(var(--g) * 1px));}
-}
-
-@keyframes glitch {
-    0%   {transform: translate(calc(var(--g) * -1px), calc(var(--g) * 1px));}
-    25%  {transform: translate(calc(var(--g) * -1px), calc(var(--g) * -1px));}
-    50%  {transform: translate(calc(var(--g) * 1px), calc(var(--g) * 1px));}
-    75%  {transform: translate(calc(var(--g) * 1px), calc(var(--g) * -1px));}
-    100% {transform: translate(calc(var(--g) * -1px), calc(var(--g) * 1px));}
 }

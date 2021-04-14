@@ -9,3 +9,25 @@
 @import "./components/Footer/footer.scss";
 @import "./views/Home/home.scss";
 @import "./views/Beta/beta.scss";
+
+@keyframes fadeIn {
+    0%   {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@keyframes slideInFromBelow {
+    0%   {transform: translate(0px, 60px);}
+    60%  {transform: translate(0px, -15px);}
+    100% {transform: translate(0px, 0px);}
+}
+
+@keyframes translateCircle {
+    0%, 100%   {transform: translate(calc(var(--translateCircleSize) * -1px), calc(var(--translateCircleSize) * 1px));}
+    13%  {transform: translate(calc(var(--translateCircleSize) * -1.5px), calc(var(--translateCircleSize) * 0px));}
+    25%  {transform: translate(calc(var(--translateCircleSize) * -1px), calc(var(--translateCircleSize) * -1px));}
+    38%  {transform: translate(calc(var(--translateCircleSize) * 0px), calc(var(--translateCircleSize) * -1.5px));}
+    50%  {transform: translate(calc(var(--translateCircleSize) * 1px), calc(var(--translateCircleSize) * -1px));}
+    63%  {transform: translate(calc(var(--translateCircleSize) * 1.5px), calc(var(--translateCircleSize) * 0px));}
+    75%  {transform: translate(calc(var(--translateCircleSize) * 1px), calc(var(--translateCircleSize) * 1px));}
+    88%  {transform: translate(calc(var(--translateCircleSize) * 0px), calc(var(--translateCircleSize) * 1.5px));}
+}
