@@ -4,44 +4,12 @@ import { contentConfig } from '../../config/contentConfig';
 
 interface MainProps {
   page: string;
+  width: number;
 }
 
-interface MainState {
-  currentWidth: number;
-}
-
-class Main extends React.Component<MainProps, MainState> {
-  constructor(props) {
-    super(props);
-    this.updateWidth = this.updateWidth.bind(this);
-    this.state = {
-      currentWidth: 0
-    }
-  }
-
-  updateWidth() {
-    this.setState({
-      currentWidth: document.getElementById("main-content")!.offsetWidth
-    })
-  }
-
-  componentDidMount() {
-    this.updateWidth();
-    window.addEventListener("resize", this.updateWidth);
-  }
-
-  componentDidUpdate() {
-    if (document.getElementById("main-content")!.offsetWidth !== this.state.currentWidth) {
-      this.updateWidth();
-    }
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener("resize", this.updateWidth);
-  }
-
+class Main extends React.Component<MainProps, {}> {
+  
   render() {
-    console.log(this.state.currentWidth);
     return (
       <div id="main-content" className={this.mainContentClassNames()}>
         <div className="bx--offset-lg-1 bx--col">
@@ -57,12 +25,10 @@ class Main extends React.Component<MainProps, MainState> {
   mainContentClassNames() {
     let classNames = ["bx--row"];
 
-    if (this.state.currentWidth < 600) {
-      console.log("small");
+    if (this.props.width < 600) {
       classNames.push("small");
     }
-    else if (this.state.currentWidth < 870) {
-      console.log("medium")
+    else if (this.props.width < 870) {
       classNames.push("medium");
     }
 

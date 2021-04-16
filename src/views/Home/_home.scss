@@ -1,4 +1,5 @@
 #home {
+    height: 100vh;
     background: #fffdf6 !important;
     animation: fadeIn 2s, slideInFromBelow 1s;
 
@@ -11,6 +12,7 @@
 
         &.medium {
             font-size: 2.2rem;
+            --translateCircleSize: 1;
 
             #main-text, #main-text:before, #main-text:after {
                 padding-left: $spacing-07;
@@ -22,6 +24,7 @@
             font-size: 1.5rem;
             padding-top: $layout-06;
             padding-bottom: $layout-06;
+            --translateCircleSize: 1;
 
             #main-text, #main-text:before, #main-text:after {
                 padding-left: $spacing-04;

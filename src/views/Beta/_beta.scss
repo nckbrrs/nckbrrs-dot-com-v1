@@ -1,5 +1,8 @@
 #beta {
+    height: 100vh;
+    background: #fffdf6 !important;
     animation: fadeIn 2s, slideInFromBelow 1s;
+
 
     .col {
         height:100vh;
@@ -13,13 +16,12 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            border: 15px solid #fffdf5;
+            border: 15px solid #fffdf6;
             border-radius: 2%;
         }    
     }
     
     #right {    
-        background: #fffdf6;
         float:right;
         width:50%;
 
@@ -28,6 +30,7 @@
             font-size: 3.5vw;
             padding-left: $layout-02;
             min-width: 600px;
+            --translateCircleSize: 2;
     
             &.medium {
                 #main-text {
