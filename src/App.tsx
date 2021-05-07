@@ -13,10 +13,10 @@ class App extends React.Component<{}, {}> {
                         exact path="/"
                         render={() => <Home/>}
                     />
-                    <Route
+                    {/* <Route
                         exact path="/beta"
                         render={() => <Beta/>}
-                    />
+                    /> */}
                     <Route
                         path="*"
                         render={() => <Redirect to="/"/>}
