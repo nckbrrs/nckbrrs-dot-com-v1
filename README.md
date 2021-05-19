@@ -1,3 +1,3 @@
-# My personal website
+# nckbrrs.com
 
-nckbrrs.com
+Code for my personal website.
