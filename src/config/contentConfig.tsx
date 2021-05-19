@@ -66,7 +66,7 @@ export const contentConfig = {
             {
                 "name": "email",
                 "text": "CONTACT",
-                "href": "mailto:nckbrrs@gmail.com?subject=Your Subject Here :)&body=What's up?",
+                "href": "mailto:nckbrrs@gmail.com?subject=Your Subject Here&body=What's up?",
                 "icon": <EmailIcon/>
             },
             {
@@ -96,7 +96,7 @@ export const contentConfig = {
             {
                 "name": "email",
                 "text": "CONTACT",
-                "href": "mailto:nckbrrs@gmail.com?subject=Your Subject Here :)&body=What's up?",
+                "href": "mailto:nckbrrs@gmail.com?subject=Your Subject Here&body=What's up?",
                 "icon": <EmailIcon/>
             },
         ]
