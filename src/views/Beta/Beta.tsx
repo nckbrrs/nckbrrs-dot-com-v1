@@ -1,10 +1,10 @@
 import React from "react";
 import Main from "../../components/Main";
-import Footer from "../../components/Footer";
-import pic from "../../assets/images/beta.jpeg";
+import { TextInput } from "carbon-components-react";
 
 interface BetaState {
   curWidth: number;
+  curText: string;
 }
 
 class Beta extends React.Component<{}, BetaState> {
@@ -12,7 +12,8 @@ class Beta extends React.Component<{}, BetaState> {
     super(props);
     this.updateWidth = this.updateWidth.bind(this);
     this.state = {
-      curWidth: window.innerWidth
+      curWidth: window.innerWidth,
+      curText: ''
     }
   }
 
@@ -40,12 +41,18 @@ class Beta extends React.Component<{}, BetaState> {
   render() {
     return (
       <div id="beta">
-        <div id="left" className="col">
-          <img src={pic} alt=''/>
-        </div>
-        <div id="right" className="col">
-          <Main page="beta" width={this.state.curWidth / 2}/>
-          <Footer page="beta"/>
+        <div className="col">
+          <TextInput
+            id="text-input"
+            labelText="fun text"
+            placeholder=""
+            onChange={(e) => this.setState({curText: e.target.value})}
+            width="20"
+          />
+          <Main
+            text={this.state.curText}
+            width={this.state.curWidth}
+          />
         </div>
       </div>
     )

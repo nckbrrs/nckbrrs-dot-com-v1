@@ -1,9 +1,8 @@
 import React from "react";
 import "react-dom";
-import { contentConfig } from '../../config/contentConfig';
 
 interface MainProps {
-  page: string;
+  text: string;
   width: number;
 }
 
@@ -13,8 +12,8 @@ class Main extends React.Component<MainProps, {}> {
     return (
       <div id="main-content" className={this.mainContentClassNames()}>
         <div className="bx--offset-lg-1 bx--col">
-          <div id="main-text" data-content={contentConfig[this.props.page].mainText}>
-            {contentConfig[this.props.page].mainText}
+          <div id="main-text" data-content={this.props.text}>
+            {this.props.text}
           </div>
         </div>
         <div className="bx--col-lg-1"/>

@@ -2,6 +2,7 @@ import React from "react";
 import Header from "../../components/Header";
 import Main from "../../components/Main";
 import Footer from "../../components/Footer";
+import { contentConfig } from '../../config/contentConfig';
 
 interface HomeState {
   curWidth: number;
@@ -41,7 +42,7 @@ class Home extends React.Component<{}, HomeState> {
     return (
       <div id="home" className="bx--grid bx--grid--full-width">
         <Header page="home"/>
-        <Main page="home" width={this.state.curWidth}/>
+        <Main text={contentConfig["home"].mainText} width={this.state.curWidth}/>
         <Footer page="home"/>
       </div>
     )

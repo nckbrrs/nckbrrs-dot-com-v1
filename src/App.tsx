@@ -2,7 +2,7 @@ import React from "react";
 import "./App.scss";
 import { Switch, Route, Redirect } from "react-router-dom";
 import Home from "./views/Home";
-//import Beta from "./views/Beta";
+import Beta from "./views/Beta";
 
 class App extends React.Component<{}, {}> {
     render() {
@@ -13,10 +13,10 @@ class App extends React.Component<{}, {}> {
                         exact path="/"
                         render={() => <Home/>}
                     />
-                    {/* <Route
+                    <Route
                         exact path="/beta"
                         render={() => <Beta/>}
-                    /> */}
+                    />
                     <Route
                         path="*"
                         render={() => <Redirect to="/"/>}

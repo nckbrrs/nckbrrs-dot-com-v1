@@ -6,51 +6,20 @@
 
     .col {
         height:100vh;
+        text-align: center;
     }
-    
-    #left {
-        float: left;
-        width: 50%;
-        
-        img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border: 15px solid #fffdf6;
-            border-radius: 2%;
-        }    
+
+    .bx--text-input-wrapper {
+        padding-left: 40vw;
+        padding-right: 40vw;
+        padding-top: 5vh;
     }
-    
-    #right {    
-        float:right;
-        width:50%;
 
-        #main-content {
-            padding-top: 40vh;
-            font-size: 3.5vw;
-            padding-left: $layout-02;
-            min-width: 600px;
-            --translateCircleSize: 2;
-    
-            &.medium {
-                #main-text {
-                    font-size: 2.2rem
-                }
-            }
-    
-            &.small {
-                #main-text {
-                    font-size: 1.5rem;
-                }
-            }
-        }
-
-        #footer {
-            padding-left: $layout-06;
-
-            &.small {
-                padding-left: $spacing-11;
-            }
-        }
-    }   
+    #main-content {
+        padding-top: 30vh;
+        font-size: 5.5rem;
+        padding-left: $layout-02;
+        min-width: 600px;
+        --translateCircleSize: 2;
+    }
 }
