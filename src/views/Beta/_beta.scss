@@ -3,13 +3,7 @@
     background: #fffdf6 !important;
     animation: fadeIn 2s, slideInFromBelow 1s;
 
-
-    .col {
-        height:100vh;
-        text-align: center;
-    }
-
-    .bx--text-input-wrapper {
+    .input {
         padding-left: 10vw;
         padding-right: 80vw;
         padding-top: 5vh;
@@ -18,6 +12,7 @@
     #main-content {
         padding-top: 30vh;
         font-size: 5.5rem;
+        text-align: center;
         --translateCircleSize: 2;
     }
 

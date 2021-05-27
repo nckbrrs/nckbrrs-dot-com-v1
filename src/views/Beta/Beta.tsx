@@ -5,6 +5,7 @@ import { TextInput } from "carbon-components-react";
 interface BetaState {
   curWidth: number;
   curText: string;
+  clickedText: boolean;
 }
 
 class Beta extends React.Component<{}, BetaState> {
@@ -13,7 +14,8 @@ class Beta extends React.Component<{}, BetaState> {
     this.updateWidth = this.updateWidth.bind(this);
     this.state = {
       curWidth: window.innerWidth,
-      curText: ''
+      curText: '',
+      clickedText: false
     }
   }
 
@@ -40,15 +42,21 @@ class Beta extends React.Component<{}, BetaState> {
 
   render() {
     return (
-      <div id="beta">
-        <div className="col">
-          <TextInput
-            id="text-input"
-            labelText="rgb text"
-            placeholder=""
-            onChange={(e) => this.setState({curText: e.target.value})}
-            width="20"
-          />
+      <div id="beta" className="bx--grid bx--grid--full-width">
+        <div className="bx--row">
+          <div className="bx--col input">
+            {!this.state.clickedText && <TextInput
+              id="text-input"
+              labelText=" "
+              placeholder=""
+              onChange={(e) => this.setState({curText: e.target.value})}
+              width="20"
+            />}
+          </div>
+        </div>
+        <div
+          onClick={() => {this.setState({clickedText: !this.state.clickedText})}}
+        >
           <Main
             text={this.state.curText}
             width={this.state.curWidth}
