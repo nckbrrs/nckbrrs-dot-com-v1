@@ -10,8 +10,8 @@
     }
 
     .bx--text-input-wrapper {
-        padding-left: 40vw;
-        padding-right: 40vw;
+        padding-left: 10vw;
+        padding-right: 80vw;
         padding-top: 5vh;
     }
 
@@ -20,4 +20,33 @@
         font-size: 5.5rem;
         --translateCircleSize: 2;
     }
+
+    #main-content {
+        #main-text:before {
+            animation: dumb1 1s linear infinite;
+        }
+
+        #main-text:after {
+            animation: dumb2 1s linear infinite;
+        }
+
+        &:hover {
+            #main-text:before {
+                animation: translateCircle 3s linear infinite;
+            }
+    
+            #main-text:after {
+                animation: translateCircle 4s linear infinite;
+            }
+        }
+    }
+}
+
+@keyframes dumb1 {
+    0%, 100%   {transform: translate(calc(var(--translateCircleSize) * -1.5px), calc(var(--translateCircleSize) * 1.5px));}
+}
+
+
+@keyframes dumb2 {
+    0%, 100%   {transform: translate(calc(var(--translateCircleSize) * -3px), calc(var(--translateCircleSize) * 3px));}
 }

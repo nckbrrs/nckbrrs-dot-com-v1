@@ -44,7 +44,7 @@ class Beta extends React.Component<{}, BetaState> {
         <div className="col">
           <TextInput
             id="text-input"
-            labelText="fun text"
+            labelText="rgb text"
             placeholder=""
             onChange={(e) => this.setState({curText: e.target.value})}
             width="20"
