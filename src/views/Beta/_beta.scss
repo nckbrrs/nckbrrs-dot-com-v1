@@ -3,10 +3,20 @@
     background: #fffdf6 !important;
     animation: fadeIn 2s, slideInFromBelow 1s;
 
-    .input {
-        padding-left: 10vw;
-        padding-right: 10vw;
+    .inputs {
         padding-top: 5vh;
+        align-items: center;
+
+        #hideInputBtn .bx--btn {
+            float: right;
+        }
+
+        .bx--btn--primary {
+            min-height: 2.5rem;
+            max-height: 2.5rem;
+            width: 75%;
+        
+        }
     }
 
     #main-content {

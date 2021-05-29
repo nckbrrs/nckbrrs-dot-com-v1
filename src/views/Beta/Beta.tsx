@@ -1,11 +1,11 @@
 import React from "react";
 import Main from "../../components/Main";
-import { TextInput } from "carbon-components-react";
+import { Button, TextInput } from "carbon-components-react";
 
 interface BetaState {
   curWidth: number;
   curText: string;
-  clickedText: boolean;
+  hideTextInput: boolean;
 }
 
 class Beta extends React.Component<{}, BetaState> {
@@ -15,7 +15,7 @@ class Beta extends React.Component<{}, BetaState> {
     this.state = {
       curWidth: window.innerWidth,
       curText: '',
-      clickedText: false
+      hideTextInput: false
     }
   }
 
@@ -43,19 +43,32 @@ class Beta extends React.Component<{}, BetaState> {
   render() {
     return (
       <div id="beta" className="bx--grid bx--grid--full-width">
-        <div className="bx--row">
-          <div className="bx--col input">
-            {!this.state.clickedText && <TextInput
-              id="text-input"
-              labelText="type something and i'll render it in big pretty rgb serif"
-              placeholder=""
-              onChange={(e) => this.setState({curText: e.target.value})}
-              width="20"
-            />}
+        <div className="bx--row inputs">
+          <div className="bx--col" id="hideInputBtn">
+            <Button
+            >
+              hide textbox
+            </Button>
+          </div>
+          <div className="bx--col text-input">
+            {!this.state.hideTextInput &&
+              <TextInput
+                id="text-input"
+                labelText=""
+                placeholder="type something"
+                onChange={(e) => this.setState({curText: e.target.value})}
+              />
+            }
+          </div>
+          <div className="bx--col">
+            <Button
+            >
+              toggle animation
+            </Button>
           </div>
         </div>
         <div
-          onClick={() => {this.setState({clickedText: !this.state.clickedText})}}
+          onClick={() => {this.setState({hideTextInput: !this.state.hideTextInput})}}
         >
           <Main
             text={this.state.curText}
