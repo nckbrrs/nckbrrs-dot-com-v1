@@ -6,12 +6,10 @@
 @import "carbon-components/scss/components/text-input/text-input.scss";
 @import "carbon-components/scss/components/button/button.scss";
 
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@600&display=swap');
 
-@import "./components/Header/header.scss";
-@import "./components/Main/main.scss";
-@import "./components/Footer/footer.scss";
 @import "./views/Home/home.scss";
-@import "./views/Beta/beta.scss";
+@import "./views/Stuff/stuff.scss";
 
 @keyframes fadeIn {
     0%   {opacity: 0;}
@@ -24,13 +22,13 @@
     100% {transform: translate(0px, 0px);}
 }
 
-@keyframes translateCircle {
-    0%, 100%   {transform: translate(calc(var(--translateCircleSize) * -1px), calc(var(--translateCircleSize) * 1px));}
-    13%  {transform: translate(calc(var(--translateCircleSize) * -1.5px), calc(var(--translateCircleSize) * 0px));}
-    25%  {transform: translate(calc(var(--translateCircleSize) * -1px), calc(var(--translateCircleSize) * -1px));}
-    38%  {transform: translate(calc(var(--translateCircleSize) * 0px), calc(var(--translateCircleSize) * -1.5px));}
-    50%  {transform: translate(calc(var(--translateCircleSize) * 1px), calc(var(--translateCircleSize) * -1px));}
-    63%  {transform: translate(calc(var(--translateCircleSize) * 1.5px), calc(var(--translateCircleSize) * 0px));}
-    75%  {transform: translate(calc(var(--translateCircleSize) * 1px), calc(var(--translateCircleSize) * 1px));}
-    88%  {transform: translate(calc(var(--translateCircleSize) * 0px), calc(var(--translateCircleSize) * 1.5px));}
+@keyframes moveInCircle {
+    0%, 100%   {transform: translate(calc(var(--moveInCircleSize) * -1px), calc(var(--moveInCircleSize) * 1px));}
+    13%  {transform: translate(calc(var(--moveInCircleSize) * -1.5px), calc(var(--moveInCircleSize) * 0px));}
+    25%  {transform: translate(calc(var(--moveInCircleSize) * -1px), calc(var(--moveInCircleSize) * -1px));}
+    38%  {transform: translate(calc(var(--moveInCircleSize) * 0px), calc(var(--moveInCircleSize) * -1.5px));}
+    50%  {transform: translate(calc(var(--moveInCircleSize) * 1px), calc(var(--moveInCircleSize) * -1px));}
+    63%  {transform: translate(calc(var(--moveInCircleSize) * 1.5px), calc(var(--moveInCircleSize) * 0px));}
+    75%  {transform: translate(calc(var(--moveInCircleSize) * 1px), calc(var(--moveInCircleSize) * 1px));}
+    88%  {transform: translate(calc(var(--moveInCircleSize) * 0px), calc(var(--moveInCircleSize) * 1.5px));}
 }

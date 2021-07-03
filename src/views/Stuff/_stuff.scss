@@ -1,0 +1,65 @@
+#stuff {
+    min-height: 100vh;
+    min-width: 100vw;
+    height: 100%;
+    background: #fffdf6;
+    background-size: cover;
+
+    #header {
+        text-align: left;
+
+        a {
+            text-decoration: none;
+        }
+
+        .header-text {
+            font-family: Helvetica;
+            text-transform: lowercase;
+            font-weight: 700;
+            font-size: 4rem;
+            white-space: nowrap;
+            color: #212121;
+            padding-top: $layout-06;
+            padding-left: $layout-06;
+        }
+
+        &.medium {
+            .header-text {
+                padding-left: $spacing-06;
+            }
+        }
+
+        &.small {
+            .header-text {
+                font-size: 3rem;
+                padding-left: $spacing-06;
+            }
+        }
+    }
+
+    #links {
+        padding-top: $layout-06;
+        text-align: center;
+
+        .bx--row {
+            padding-top: $spacing-02;
+        }
+
+        .link-text {
+            display: inline-block;
+            font-family: Helvetica;
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: 1.5em;
+            color: #212121;
+            text-decoration: none;
+        }
+    
+            
+        #links-col:hover {
+            .bx--row:not(:hover) {
+                opacity: 0.3;
+            }
+        }
+    }
+}
