@@ -23,7 +23,6 @@ class Home extends React.Component<{}, HomeState> {
   componentDidMount() {
     this.updateWidth();
     window.addEventListener("resize", this.updateWidth);
-    alert("width:" + document.getElementById("App")!.offsetWidth + " height:" + document.getElementById("App")!.offsetHeight);
   }
 
   componentDidUpdate() {

@@ -27,8 +27,6 @@ class Stuff extends React.Component<{}, StuffState> {
   }
 
   componentDidUpdate() {
-    alert("width:" + document.getElementById("App")!.offsetWidth + " height:" + document.getElementById("App")!.offsetHeight);
-
     if (document.getElementById("stuff")!.offsetWidth !== this.state.curWidth) {
       this.updateWidth();
     }
