@@ -39,7 +39,7 @@ class Home extends React.Component<{}, HomeState> {
   render() {
 
     return (
-      <div id="home" className="bx--grid bx--grid--full-width">
+      <div id="home" className={this.homeClassNames()}>
         <div id="header" className={this.headerClassNames()}>
           <div className="bx--col">
             <a href="/">
@@ -110,6 +110,22 @@ class Home extends React.Component<{}, HomeState> {
 
   footerClassNames() {
     let classNames = ["bx--row"];
+
+    if (this.state.curWidth < 485) {
+      classNames.push("x-small");
+    }
+    else if (this.state.curWidth < 785) {
+      classNames.push("small");
+    }
+    else if (this.state.curWidth < 1335) {
+      classNames.push("medium");
+    }
+
+    return classNames.join(" ");
+  }
+
+  homeClassNames() {
+    let classNames = ["bx--grid", "bx--grid--full-width"];
 
     if (this.state.curWidth < 485) {
       classNames.push("x-small");
