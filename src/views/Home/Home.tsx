@@ -128,7 +128,7 @@ class Home extends React.Component<{}, HomeState> {
     let classNames = ["bx--grid", "bx--grid--full-width"];
 
     if (this.state.curWidth < 485) {
-      classNames.push("x-small");
+      classNames.push("xsmall");
     }
     else if (this.state.curWidth < 785) {
       classNames.push("small");
