@@ -8,7 +8,7 @@ import Stuff from "./views/Stuff";
 class App extends React.Component<{}, {}> {
     render() {
         return (
-            <div className="App">
+            <div id="App" className="App">
                 <Switch>
                     <Route
                         exact path="/"

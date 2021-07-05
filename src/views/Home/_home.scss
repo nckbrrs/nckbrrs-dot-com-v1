@@ -26,6 +26,7 @@
 
         &.medium {
             .header-text {
+                padding-top: $layout-04;
                 padding-left: $spacing-06;
             }
         }
@@ -33,6 +34,7 @@
         &.small {
             .header-text {
                 font-size: 3rem;
+                padding-top: $layout-03;
                 padding-left: $spacing-06;
             }
         }
@@ -128,6 +130,7 @@
 
         &.medium {
             padding-top: $layout-06 + $layout-03;
+            padding-bottom: $layout-04;
 
             .link-text {
                 display: none;

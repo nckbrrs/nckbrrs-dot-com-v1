@@ -23,6 +23,7 @@ class Home extends React.Component<{}, HomeState> {
   componentDidMount() {
     this.updateWidth();
     window.addEventListener("resize", this.updateWidth);
+    alert("width:" + document.getElementById("App")!.offsetWidth + " height:" + document.getElementById("App")!.offsetHeight);
   }
 
   componentDidUpdate() {
@@ -36,6 +37,7 @@ class Home extends React.Component<{}, HomeState> {
   }
 
   render() {
+
     return (
       <div id="home" className="bx--grid bx--grid--full-width">
         <div id="header" className={this.headerClassNames()}>
