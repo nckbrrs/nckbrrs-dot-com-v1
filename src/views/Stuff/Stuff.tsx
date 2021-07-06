@@ -42,7 +42,9 @@ class Stuff extends React.Component<{}, StuffState> {
         <div id="header" className={this.headerClassNames()}>
           <div className="bx--col">
             <a href="/">
-              <h1 className="header-text">{contentConfig['home'].headerText}</h1>
+              <h1 className="header-text" data-content={contentConfig['home'].headerText}>
+                {contentConfig['home'].headerText}
+              </h1>
             </a>
           </div>
         </div>

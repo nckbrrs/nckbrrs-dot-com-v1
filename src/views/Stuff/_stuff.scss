@@ -4,6 +4,7 @@
     height: 100%;
 
     #header {
+        --moveInCircleSize: 2;
         text-align: left;
 
         a {
@@ -16,15 +17,30 @@
             font-weight: 700;
             font-size: 4rem;
             white-space: nowrap;
-            color: #212121;
+            color: #2e85ff;
             padding-top: $layout-06;
             padding-left: $layout-06;
-        }
+            position: relative;
+            display: inline-block;
+            z-index: 1;
 
-        &.medium {
-            .header-text {
-                padding-top: $layout-04;
-                padding-left: $spacing-06;
+            &:before, &:after {
+                content:attr(data-content);
+                position: absolute;
+                top: $layout-06;
+                left: $layout-06;
+            }
+        
+            &:before {
+                color: #00ffaa;
+                z-index: -1;
+                animation: moveInCircle 3s linear 0.5s infinite;
+            }
+        
+            &:after {
+                color: #ff6622;
+                z-index: -2;
+                animation: moveInCircle 3s linear infinite;
             }
         }
 
@@ -33,6 +49,11 @@
                 font-size: 3rem;
                 padding-top: $layout-04;
                 padding-left: $spacing-06;
+
+                &:before, &:after {
+                    top: $layout-04;
+                    left: $spacing-06;
+                }
             }
         }
     }
