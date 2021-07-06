@@ -21,31 +21,17 @@
             padding-top: $layout-06;
             padding-left: $layout-06;
         }
-
-        // &.medium {
-        //     .header-text {
-        //         padding-top: $layout-04;
-        //         padding-left: $spacing-06;
-        //     }
-        // }
-
-        // &.small {
-        //     .header-text {
-        //         font-size: 3rem;
-        //         padding-top: $layout-04;
-        //         padding-left: $spacing-06;
-        //     }
-        // }
     }
 
     #main {
         text-align: center;
         font-size: 3.5rem;
+        font-weight: 600;
         padding-top: $layout-07;
         --moveInCircleSize: 2;
 
         #main-text {
-            font-family: 'IBM Plex Serif', serif;
+            font-family: 'IBM Plex Mono', monospace;
             color: #2e85ff;
             line-height: 1.6em;
             position: relative;
@@ -70,114 +56,42 @@
                 animation: moveInCircle 3s linear infinite;
             }
         }
-
-        // &.medium {
-        //     font-size: 2.75rem;
-        //     --moveInCircleSize: 1;
-
-        //     #main-text, #main-text:before, #main-text:after {
-        //         padding-left: $spacing-07;
-        //         padding-right: $spacing-07;
-        //     }
-        // }
-
-        // &.small {
-        //     font-size: 2.2rem;
-        //     padding-top: $layout-06;
-        //     --moveInCircleSize: 1;
-
-        //     #main-text, #main-text:before, #main-text:after {
-        //         padding-left: $spacing-04;
-        //         padding-right: $spacing-04;
-        //     }
-        // }
     }
 
     #footer {
         animation: fadeIn 2s, slideInFromBelow 1s;
         padding-top: $layout-07;
         text-align: center;
-
-        svg {
-            height: 40px;
-            fill: #212121;
-            border-radius: 50%;
-            box-shadow: 1px 1px 2px rgb(33,33,33,0.5);
-        }
         
-        #links .bx--col {
-            padding-left: $spacing-04;
-            padding-right: $spacing-04;
-        }
+        #links {
+            &:hover {
+                .bx--col:not(:hover) {
+                    opacity: 0.3;
+                }
+            }
 
-        .link-text {
-            display: inline-block;
-            font-family: Helvetica;
-            text-transform: uppercase;
-            font-weight: 700;
-            font-size: 1.25em;
-            color: #212121;
-            text-decoration: none;
-        }
+            .bx--col {
+                padding-left: $spacing-04;
+                padding-right: $spacing-04;
 
-        &:hover {
-            .bx--col:not(:hover) {
-                opacity: 0.3;
+                .link-text {
+                    display: inline-block;
+                    font-family: Helvetica;
+                    text-transform: uppercase;
+                    font-weight: 700;
+                    font-size: 1.25em;
+                    color: #212121;
+                    text-decoration: none;
+                }
+
+                svg {
+                    height: 40px;
+                    fill: #212121;
+                    border-radius: 50%;
+                    box-shadow: 1px 1px 2px rgb(33,33,33,0.5);
+                }
             }
         }
-
-        // &.medium {
-        //     padding-top: $layout-06 + $layout-03;
-        //     padding-bottom: $layout-04;
-
-        //     .link-text {
-        //         display: none;
-        //     }
-        // }
-
-        // &.small {
-        //     padding-top: $layout-06;
-
-        //     #links .bx--col {
-        //         padding-right: $spacing-02 + $spacing-01;
-        //         padding-left: $spacing-02 + $spacing-01;
-
-        //         .link-text {
-        //             display: none;
-        //         }
-
-        //         svg {
-        //             height: 32px;
-        //         }
-        //     }
-        // }
-
-        // &.x-small {
-        //     padding-top: $layout-06;
-
-        //     svg {
-        //         display: none
-        //     }
-
-        //     #links .bx--col:not(#my-stuff-link-col) {
-        //         display: none;
-        //     }
-
-        //     #my-stuff-link-col .link-text {
-        //         text-decoration: none;
-        //     }
-        // }
-
-        // &:not(.small):not(.medium):not(.x-small) {
-
-        //     #my-stuff-link-col {
-        //         display: none;
-        //     }
-
-        //     svg {
-        //         display: none
-        //     }
-        // }
     }
 
     &.medium {
@@ -189,14 +103,12 @@
         }
 
         #main {
-            #main-text {
-                font-size: 2.75rem;
-                --moveInCircleSize: 1;
-    
-                &:before, &:after {
-                    padding-left: $spacing-07;
-                    padding-right: $spacing-07;
-                }
+            font-size: 2.75rem;
+            --moveInCircleSize: 1;
+
+            #main-text,#main-text:before,#main-text:after {
+                padding-left: $spacing-07;
+                padding-right: $spacing-07;
             }
         }
 
@@ -204,7 +116,7 @@
             padding-top: $layout-06 + $layout-03;
             padding-bottom: $layout-04;
 
-            .link-text {
+            #links .link-text {
                 display: none;
             }
         }
@@ -277,16 +189,18 @@
             padding-top: $layout-06;
             padding-bottom: $layout-04;
 
-            svg {
-                display: none
-            }
+            #links {
+                svg {
+                    display: none
+                }
 
-            #links .bx--col:not(#my-stuff-link-col) {
-                display: none;
-            }
-
-            #my-stuff-link-col .link-text {
-                text-decoration: none;
+                .bx--col:not(#my-stuff-link-col) {
+                    display: none;
+                }
+    
+                #my-stuff-link-col .link-text {
+                    text-decoration: none;
+                }
             }
         }
     }

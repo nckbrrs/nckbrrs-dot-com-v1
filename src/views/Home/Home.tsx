@@ -39,14 +39,14 @@ class Home extends React.Component<{}, HomeState> {
 
     return (
       <div id="home" className={this.homeClassNames()}>
-        <div id="header" className={this.headerClassNames()}>
+        <div id="header" className="bx--row">
           <div className="bx--col">
             <a href="/">
               <h1 className="header-text">{contentConfig['home'].headerText}</h1>
             </a>
           </div>
         </div>
-        <div id="main" className={this.mainContentClassNames()}>
+        <div id="main" className="bx--row">
           <div className="bx--offset-lg-1 bx--col">
             <div id="main-text" data-content={contentConfig['home'].mainText}>
               {contentConfig['home'].mainText}
@@ -54,7 +54,7 @@ class Home extends React.Component<{}, HomeState> {
           </div>
           <div className="bx--col-lg-1"/>
         </div>
-        <div id="footer" className={this.footerClassNames()}>
+        <div id="footer" className="bx--row">
         <div className="bx--col"/>
         <div id="links" className="bx--row">
           <div id="my-stuff-link-col" className="bx--col">
@@ -79,48 +79,6 @@ class Home extends React.Component<{}, HomeState> {
       </div>
       </div>
     )
-  }
-
-  headerClassNames() {
-    let classNames = ["bx--row"];
-
-    if (this.state.curWidth < 785) {
-      classNames.push("small");
-    }
-    else if (this.state.curWidth < 1335) {
-      classNames.push("medium");
-    }
-
-    return classNames.join(" ");
-  }
-
-  mainContentClassNames() {
-    let classNames = ["bx--row"];
-
-    if (this.state.curWidth < 785) {
-      classNames.push("small");
-    }
-    else if (this.state.curWidth < 1335) {
-      classNames.push("medium");
-    }
-
-    return classNames.join(" ");
-  }
-
-  footerClassNames() {
-    let classNames = ["bx--row"];
-
-    if (this.state.curWidth < 485) {
-      classNames.push("x-small");
-    }
-    else if (this.state.curWidth < 785) {
-      classNames.push("small");
-    }
-    else if (this.state.curWidth < 1335) {
-      classNames.push("medium");
-    }
-
-    return classNames.join(" ");
   }
 
   homeClassNames() {

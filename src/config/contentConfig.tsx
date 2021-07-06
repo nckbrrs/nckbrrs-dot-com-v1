@@ -13,7 +13,7 @@ import ResumePDF from '../assets/images/resume.pdf';
 export const contentConfig = {
     home: {
         headerText: "nick barrs",
-        mainText: "...is a software developer and musician living and working in Raleigh.",
+        mainText: "Hi! I'm a software developer and musician living and working in Raleigh.",
         socialLinks: [
             { 
                 "name": "appleMusic",
@@ -76,29 +76,5 @@ export const contentConfig = {
                 "icon": <ResumeIcon/>
             }
         ]
-    },
-    beta: {
-        headerText: "beta",
-        mainText: "beta beta",
-        socialLinks: [
-            {
-                "name": "twitter",
-                "text": "TWITTER",
-                "href": "https://www.twitter.com/nckbrrs",
-                "icon": <TwitterIcon/>
-            },
-            {
-                "name": "instagram",
-                "text": "INSTAGRAM",
-                "href": "https://www.instagram.com/nckbrrs",
-                "icon": <InstagramIcon/>
-            },
-            {
-                "name": "email",
-                "text": "CONTACT",
-                "href": "mailto:nckbrrs@gmail.com?subject=Your Subject Here&body=What's up?",
-                "icon": <EmailIcon/>
-            },
-        ]
-    },
+    }
 }
