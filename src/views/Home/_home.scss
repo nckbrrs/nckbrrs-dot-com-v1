@@ -95,6 +95,9 @@
     }
 
     &.medium {
+        min-height: 0px;
+        max-height: 100vh;
+
         #header {
             .header-text {
                 padding-top: $layout-04;
@@ -124,6 +127,7 @@
 
     &.small {
         min-height: 0px;
+        max-height: 100vh;
 
         #header {
             .header-text {
