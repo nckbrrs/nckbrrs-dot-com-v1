@@ -15,11 +15,11 @@
             font-family: Helvetica;
             text-transform: lowercase;
             font-weight: 700;
-            font-size: 4rem;
+            font-size: 3rem;
             white-space: nowrap;
             color: #2e85ff;
-            padding-top: $layout-06;
-            padding-left: $layout-06;
+            padding-top: $layout-04;
+            padding-left: $spacing-06;
             position: relative;
             display: inline-block;
             z-index: 1;
@@ -27,8 +27,8 @@
             &:before, &:after {
                 content:attr(data-content);
                 position: absolute;
-                top: $layout-06;
-                left: $layout-06;
+                top: $layout-04;
+                left: $spacing-06;
             }
         
             &:before {
@@ -41,19 +41,6 @@
                 color: #ff6622;
                 z-index: -2;
                 animation: moveInCircle 3s linear infinite;
-            }
-        }
-
-        &.small {
-            .header-text {
-                font-size: 3rem;
-                padding-top: $layout-04;
-                padding-left: $spacing-06;
-
-                &:before, &:after {
-                    top: $layout-04;
-                    left: $spacing-06;
-                }
             }
         }
     }
@@ -69,7 +56,7 @@
         .link-text {
             display: inline-block;
             font-family: Helvetica;
-            text-transform: uppercase;
+            text-transform: lowercase;
             font-weight: 700;
             font-size: 1.5em;
             color: #212121;
