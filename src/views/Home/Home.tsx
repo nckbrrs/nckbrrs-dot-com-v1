@@ -16,7 +16,7 @@ class Home extends React.Component<{}, HomeState> {
 
   updateWidth() {
     this.setState({
-      curWidth: document.getElementById("home")!.offsetWidth
+      curWidth: window.innerWidth
     })
   }
 
@@ -26,7 +26,7 @@ class Home extends React.Component<{}, HomeState> {
   }
 
   componentDidUpdate() {
-    if (document.getElementById("home")!.offsetWidth !== this.state.curWidth) {
+    if (window.innerWidth !== this.state.curWidth) {
       this.updateWidth();
     }
   }
@@ -36,13 +36,12 @@ class Home extends React.Component<{}, HomeState> {
   }
 
   render() {
-
     return (
       <div id="home" className={this.homeClassNames()}>
         <div id="header" className="bx--row">
           <div className="bx--col">
             <a href="/">
-              <h1 className="header-text">{contentConfig['home'].headerText}</h1>
+              <h1 id="header-text">{contentConfig['home'].headerText}</h1>
             </a>
           </div>
         </div>

@@ -1,25 +1,25 @@
 #home {
     min-height: 100vh;
-    min-width: 100vw;
     height: 100%;
     animation: fadeIn 2s, slideInFromBelow 1s;
 
     #header {
         text-align: left;
+        padding-top: 13vh;
+        padding-left: 13vh;
 
         a {
             text-decoration: none;
         }
 
-        .header-text {
+        #header-text {
             font-family: Helvetica;
             text-transform: lowercase;
             font-weight: 700;
             font-size: 4rem;
             white-space: nowrap;
             color: #212121;
-            padding-top: $layout-06;
-            padding-left: $layout-06;
+            
         }
     }
 
@@ -27,7 +27,7 @@
         text-align: center;
         font-size: 3.5rem;
         font-weight: 600;
-        padding-top: $layout-07;
+        padding-top: 17.5vh;
         --moveInCircleSize: 2;
 
         #main-text {
@@ -60,7 +60,8 @@
 
     #footer {
         animation: fadeIn 2s, slideInFromBelow 1s;
-        padding-top: $layout-07;
+        padding-top: 17.5vh;
+        padding-bottom: 5.25vh;
         text-align: center;
         
         #links {
@@ -98,13 +99,11 @@
         min-height: 0px;
 
         #header {
-            .header-text {
-                padding-top: $layout-04;
-                padding-left: $spacing-06;
-            }
+            padding-left: $spacing-06;
         }
 
         #main {
+            padding-top: 14vh;
             font-size: 2.75rem;
             --moveInCircleSize: 1;
 
@@ -115,8 +114,7 @@
         }
 
         #footer {
-            padding-top: $layout-06 + $layout-03;
-            padding-bottom: $layout-04;
+            padding-top: 14vh;
 
             #links .link-text {
                 display: none;
@@ -128,16 +126,16 @@
         min-height: 0px;
 
         #header {
-            .header-text {
+            padding-left: $spacing-06;
+
+            #header-text {
                 font-size: 3rem;
-                padding-top: $layout-04;
-                padding-left: $spacing-06;
             }
         }
 
         #main {
             font-size: 2.2rem;
-            padding-top: $layout-06;
+            padding-top: 9vh;
             --moveInCircleSize: 1;
 
             #main-text, #main-text:before, #main-text:after {
@@ -147,8 +145,7 @@
         }
 
         #footer {
-            padding-top: $layout-06;
-            padding-bottom: $layout-04;
+            padding-top: 10vh;
 
             #links .bx--col {
                 padding-right: $spacing-02 + $spacing-01;
@@ -169,16 +166,16 @@
         min-height: 0px;
 
         #header {
-            .header-text {
+            padding-left: $spacing-06;
+
+            #header-text {
                 font-size: 3rem;
-                padding-top: $layout-04;
-                padding-left: $spacing-06;
             }
         }
 
         #main {
             font-size: 2rem;
-            padding-top: $layout-06;
+            padding-top: 9vh;
             --moveInCircleSize: 1.5;
 
             #main-text, #main-text:before, #main-text:after {
@@ -188,8 +185,7 @@
         }
         
         #footer {
-            padding-top: $layout-06;
-            padding-bottom: $layout-04;
+            padding-top: 10vh;
 
             #links {
                 svg {

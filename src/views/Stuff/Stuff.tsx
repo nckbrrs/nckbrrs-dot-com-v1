@@ -1,8 +1,46 @@
 import React from "react";
+import { Redirect } from "react-router-dom";
 import { contentConfig } from '../../config/contentConfig';
 
-class Stuff extends React.Component<{}, {}> {
+interface StuffState {
+  curWidth: number;
+}
+
+class Stuff extends React.Component<{}, StuffState> {
+  constructor(props) {
+    super(props);
+    this.updateWidth = this.updateWidth.bind(this);
+    this.state = {
+      curWidth: window.innerWidth
+    }
+  }
+
+  updateWidth() {
+    this.setState({
+      curWidth: window.innerWidth
+    })
+  }
+
+  componentDidMount() {
+    this.updateWidth();
+    window.addEventListener("resize", this.updateWidth);
+  }
+
+  componentDidUpdate() {
+    if (window.innerWidth !== this.state.curWidth) {
+      this.updateWidth();
+    }
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("resize", this.updateWidth);
+  }
+
   render() {
+    if (this.state.curWidth > 1000) {
+      return <Redirect to="/" />
+    }
+
     return (
       <div id="stuff" className="bx--grid bx--grid--full-width">
         <div id="header" className="bx--row">
