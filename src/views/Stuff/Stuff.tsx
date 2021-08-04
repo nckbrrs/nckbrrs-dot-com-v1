@@ -37,7 +37,7 @@ class Stuff extends React.Component<{}, StuffState> {
   }
 
   render() {
-    if (this.state.curWidth > 1000) {
+    if (this.state.curWidth > 500) {
       return <Redirect to="/" />
     }
 

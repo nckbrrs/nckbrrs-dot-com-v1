@@ -1,11 +1,12 @@
 #stuff {
     min-height: 100vh;
-    min-width: 100vw;
     height: 100%;
 
     #header {
         --moveInCircleSize: 2;
         text-align: left;
+        padding-top: 12vh;
+        padding-left: $spacing-06;
 
         a {
             text-decoration: none;
@@ -18,8 +19,6 @@
             font-size: 3rem;
             white-space: nowrap;
             color: #2e85ff;
-            padding-top: $layout-04;
-            padding-left: $spacing-06;
             position: relative;
             display: inline-block;
             z-index: 1;
@@ -27,8 +26,7 @@
             &:before, &:after {
                 content:attr(data-content);
                 position: absolute;
-                top: $layout-04;
-                left: $spacing-06;
+                left: 0px;
             }
         
             &:before {
@@ -46,7 +44,7 @@
     }
 
     #links {
-        padding-top: $layout-06;
+        padding-top: 9vh;
         text-align: center;
 
         .bx--row {
