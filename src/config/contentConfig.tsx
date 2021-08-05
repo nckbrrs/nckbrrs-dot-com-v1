@@ -28,12 +28,6 @@ export const contentConfig = {
                 "icon": <SpotifyIcon/>
             },
             {
-                "name": "soundcloud",
-                "text": "SOUNDCLOUD",
-                "href": "https://soundcloud.com/nckbrrs",
-                "icon": <SoundcloudIcon/>
-            },
-            {
                 "name": "youtube",
                 "text": "YOUTUBE",
                 "href": "https://www.youtube.com/channel/UC4PnMvHxARiaOhzw-99Q4JA",
@@ -66,7 +60,7 @@ export const contentConfig = {
             {
                 "name": "email",
                 "text": "CONTACT",
-                "href": "mailto:nckbrrs@gmail.com",
+                "href": "mailto:nckbrrs@icloud.com",
                 "icon": <EmailIcon/>
             },
             {
