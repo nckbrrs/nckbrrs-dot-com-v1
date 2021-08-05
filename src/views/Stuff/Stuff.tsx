@@ -1,6 +1,7 @@
 import React from "react";
 import { Redirect } from "react-router-dom";
 import { contentConfig } from '../../config/contentConfig';
+import NBIcon from '../../assets/icons/NB';
 
 interface StuffState {
   curWidth: number;
@@ -44,11 +45,11 @@ class Stuff extends React.Component<{}, StuffState> {
     return (
       <div id="stuff" className="bx--grid bx--grid--full-width">
         <div id="header" className="bx--row">
-          <div className="bx--col">
+          <div id="logo-col" className="bx--col">
             <a href="/">
-              <h1 className="header-text" data-content={contentConfig['home'].headerText}>
-                {contentConfig['home'].headerText}
-              </h1>
+              <NBIcon/>
+              <NBIcon/>
+              <NBIcon/>
             </a>
           </div>
         </div>
@@ -60,9 +61,11 @@ class Stuff extends React.Component<{}, StuffState> {
               contentConfig['home'].socialLinks.map((link, i) =>  {
                 return (
                   <div className="bx--row">
-                    <a href={link['href']}>
-                      <div className="link-text">{link['text']}</div>
-                    </a>
+                    <div className="bx--col link-col">
+                      <a href={link['href']}>
+                        <div className="link-text">{link['text']}</div>
+                      </a>
+                    </div>
                   </div>
                 )
               })

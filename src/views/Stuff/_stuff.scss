@@ -4,68 +4,74 @@
 
     #header {
         --moveInCircleSize: 2;
-        text-align: left;
         padding-top: 12vh;
-        padding-left: $spacing-06;
 
         a {
             text-decoration: none;
         }
 
-        .header-text {
-            font-family: Helvetica;
-            text-transform: lowercase;
-            font-weight: 700;
-            font-size: 3rem;
-            white-space: nowrap;
-            color: #2e85ff;
-            position: relative;
-            display: inline-block;
-            z-index: 1;
+        #logo-col {
+            display: flex;
+            align-items: center;
+            justify-content: center;
 
-            &:before, &:after {
-                content:attr(data-content);
-                position: absolute;
-                left: 0px;
-            }
-        
-            &:before {
-                color: #00ffaa;
-                z-index: -1;
-                animation: moveInCircle 3s linear 0.5s infinite;
-            }
-        
-            &:after {
-                color: #ff6622;
-                z-index: -2;
-                animation: moveInCircle 3s linear infinite;
+            #nbicon {
+                height: 3rem;
+
+                &:first-of-type {
+                    fill: #00ffaa;
+                    z-index: -1;
+                    animation: moveInCircle 3s linear 0.5s infinite;
+                    position: absolute;
+                }
+
+                &:nth-of-type(2) {
+                    fill: #2e85ff;
+                    z-index: 1;
+                    position: absolute;
+
+                }
+
+                &:nth-of-type(3) {
+                    fill: #ff6622;
+                    z-index: -2;
+                    animation: moveInCircle 3s linear infinite;
+                }
             }
         }
     }
 
     #links {
         padding-top: 9vh;
-        text-align: center;
 
         .bx--row {
             padding-top: $spacing-02;
         }
 
-        .link-text {
-            display: inline-block;
-            font-family: Helvetica;
-            text-transform: lowercase;
-            font-weight: 700;
-            font-size: 1.5em;
-            color: #212121;
-            text-decoration: none;
-        }
-    
-            
-        #links-col:hover {
-            .bx--row:not(:hover) {
-                opacity: 0.3;
+        .link-col {
+            text-align: left;
+
+            .link-text {
+                display: inline-block;
+                font-family: Helvetica;
+                text-transform: lowercase;
+                font-weight: 700;
+                font-size: 1.5em;
+                color: #212121;
+                text-decoration: none;
             }
         }
+            
+        #links-col {
+            padding-left: 24px;
+
+            &:hover {
+                .bx--row:not(:hover) {
+                    opacity: 0.3;
+                }
+            }
+        }
+        
+        
     }
 }
