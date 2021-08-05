@@ -7,20 +7,33 @@
         text-align: left;
         padding-top: 12vh;
         padding-left: 12vh;
+        padding-right: 12vh;
+
+        #logo-col {
+            text-align: right;
+
+            svg {
+                fill: #212121;
+                height: 4rem;
+                padding-bottom: -2px;
+            }
+        }
 
         a {
             text-decoration: none;
+
+            #header-text {
+                font-family: Helvetica;
+                text-transform: lowercase;
+                font-weight: 700;
+                font-size: 4rem;
+                white-space: nowrap;
+                color: #212121;
+                
+            }
         }
 
-        #header-text {
-            font-family: Helvetica;
-            text-transform: lowercase;
-            font-weight: 700;
-            font-size: 4rem;
-            white-space: nowrap;
-            color: #212121;
-            
-        }
+        
     }
 
     #main {
@@ -100,6 +113,7 @@
 
         #header {
             padding-left: $spacing-06;
+            padding-right: $spacing-06;
         }
 
         #main {
@@ -127,9 +141,18 @@
 
         #header {
             padding-left: $spacing-06;
+            padding-right: $spacing-06;
 
-            #header-text {
-                font-size: 3rem;
+            #text-col {
+                display: none;
+            }
+
+            #logo-col {
+                text-align: left;
+
+                svg {
+                    height: 4rem;
+                }
             }
         }
 
@@ -166,15 +189,23 @@
         min-height: 0px;
 
         #header {
-            padding-left: $spacing-06;
+            //padding-left: $spacing-06;
 
-            #header-text {
-                font-size: 3rem;
+            #text-col {
+                display: none;
+            }
+
+            #logo-col {
+                text-align: center;
+
+                svg {
+                    height: 3rem;
+                }
             }
         }
 
         #main {
-            font-size: 2rem;
+            font-size: 1.9rem;
             padding-top: 9vh;
             --moveInCircleSize: 1.5;
 
