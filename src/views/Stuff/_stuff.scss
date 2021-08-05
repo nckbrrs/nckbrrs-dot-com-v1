@@ -1,6 +1,7 @@
 #stuff {
     min-height: 100vh;
     height: 100%;
+    animation: fadeIn 1s;
 
     #header {
         --moveInCircleSize: 2;
