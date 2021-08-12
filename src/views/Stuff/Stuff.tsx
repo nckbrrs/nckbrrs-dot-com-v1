@@ -1,7 +1,6 @@
 import React from "react";
 import { Redirect } from "react-router-dom";
 import { contentConfig } from '../../config/contentConfig';
-import NBIcon from '../../assets/icons/NB';
 import NBIconWithText from "../../assets/icons/NBwithText";
 
 interface StuffState {
