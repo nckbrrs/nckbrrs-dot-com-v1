@@ -2,6 +2,7 @@ import React from "react";
 import { Redirect } from "react-router-dom";
 import { contentConfig } from '../../config/contentConfig';
 import NBIcon from '../../assets/icons/NB';
+import NBIconWithText from "../../assets/icons/NBwithText";
 
 interface StuffState {
   curWidth: number;
@@ -47,9 +48,9 @@ class Stuff extends React.Component<{}, StuffState> {
         <div id="header" className="bx--row">
           <div id="logo-col" className="bx--col">
             <a href="/">
-              <NBIcon/>
-              <NBIcon/>
-              <NBIcon/>
+              <NBIconWithText/>
+              <NBIconWithText/>
+              <NBIconWithText/>
             </a>
           </div>
         </div>

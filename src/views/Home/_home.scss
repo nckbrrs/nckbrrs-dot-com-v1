@@ -9,7 +9,17 @@
         padding-left: 12vh;
         padding-right: 12vh;
 
-        #logo-col {
+        #logo-no-text {
+            text-align: right;
+
+            svg {
+                fill: #212121;
+                height: 4rem;
+                padding-bottom: -2px;
+            }
+        }
+
+        #logo-with-text {
             text-align: right;
 
             svg {
@@ -39,7 +49,7 @@
         font-size: 3.5rem;
         font-weight: 600;
         padding-top: 17.5vh;
-        --moveInCircleSize: 2;
+        --moveInCircleSize: 1;
 
         #main-text {
             font-family: 'IBM Plex Mono', serif;
@@ -112,12 +122,15 @@
         #header {
             padding-left: $spacing-06;
             padding-right: $spacing-06;
+
+            #logo-with-text {
+                display: none;
+            }
         }
 
         #main {
             padding-top: 14vh;
             font-size: 2.75rem;
-            --moveInCircleSize: 1;
 
             #main-text,#main-text:before,#main-text:after {
                 padding-left: $spacing-07;
@@ -142,19 +155,22 @@
                 display: none;
             }
 
-            #logo-col {
+            #logo-no-text {
+                display: none;
+            }
+
+            #logo-with-text {
                 text-align: center;
 
                 svg {
-                    height: 4rem;
+                    height: 4.5rem;
                 }
             }
         }
 
         #main {
-            font-size: 2.2rem;
+            font-size: 1.8rem;
             padding-top: 9vh;
-            --moveInCircleSize: 1;
 
             #main-text, #main-text:before, #main-text:after {
                 padding-left: $spacing-04;
@@ -188,19 +204,22 @@
                 display: none;
             }
 
-            #logo-col {
+            #logo-no-text {
+                display: none;
+            }
+
+            #logo-with-text {
                 text-align: center;
 
                 svg {
-                    height: 3rem;
+                    height: 4.5rem;
                 }
             }
         }
 
         #main {
-            font-size: 1.9rem;
+            font-size: 1.8rem;
             padding-top: 9vh;
-            --moveInCircleSize: 1.5;
 
             #main-text, #main-text:before, #main-text:after {
                 padding-left: $spacing-04;
@@ -228,6 +247,12 @@
     }
 
     &:not(.small):not(.medium):not(.xsmall) {
+        #header {
+            #logo-with-text {
+                display: none;
+            }
+        }
+
         #footer {
             #my-stuff-link-col {
                 display: none;

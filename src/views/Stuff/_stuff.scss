@@ -4,7 +4,7 @@
     animation: fadeIn 1s;
 
     #header {
-        --moveInCircleSize: 2;
+        --moveInCircleSize: 1;
         padding-top: 12vh;
 
         a {
@@ -17,10 +17,10 @@
             justify-content: center;
 
             #nbicon {
-                height: 3rem;
+                height: 4.5rem;
 
                 &:first-of-type {
-                    fill: #00ffaa;
+                    fill: #ff6622;
                     z-index: -1;
                     animation: moveInCircle 3s linear 0.5s infinite;
                     position: absolute;
@@ -34,7 +34,7 @@
                 }
 
                 &:nth-of-type(3) {
-                    fill: #ff6622;
+                    fill: #00ffaa;
                     z-index: -2;
                     animation: moveInCircle 3s linear infinite;
                 }
@@ -50,7 +50,7 @@
         }
 
         .link-col {
-            text-align: left;
+            text-align: center;
 
             .link-text {
                 display: inline-block;
@@ -64,8 +64,6 @@
         }
             
         #links-col {
-            padding-left: 1.5rem;
-
             &:hover {
                 .bx--row:not(:hover) {
                     opacity: 0.3;

@@ -1,6 +1,7 @@
 import React from "react";
 import { contentConfig } from '../../config/contentConfig';
 import NBIcon from '../../assets/icons/NB';
+import NBIconWithText from "../../assets/icons/NBwithText";
 
 interface HomeState {
   curWidth: number;
@@ -45,8 +46,11 @@ class Home extends React.Component<{}, HomeState> {
               <h1 id="header-text">{contentConfig['home'].headerText}</h1>
             </a>
           </div>
-          <div id="logo-col" className="bx--col">
+          <div id="logo-no-text" className="bx--col">
             <NBIcon/>
+          </div>
+          <div id="logo-with-text" className="bx--col">
+            <NBIconWithText/>
           </div>
         </div>
         <div id="main" className="bx--row">
