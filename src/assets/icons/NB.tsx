@@ -1,6 +1,6 @@
 export default function NBIcon() {
 	return (
-		<svg version="1.1" id="nbicon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 395 342" >
+		<svg version="1.1" id="nb-logo-no-text" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 395 342" >
 
 		<path d="M 128.00,85.00
            C 128.00,85.00 128.00,21.00 128.00,21.00

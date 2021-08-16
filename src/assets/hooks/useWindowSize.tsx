@@ -1,29 +1,30 @@
 import { useState, useEffect } from "react";
 
-// Custom hook for keeping track of window size
-interface Size {
-    width: number;
-    height: number;
+const getWindowSize = () => {
+    if (window.innerWidth < 485) {
+        return "xsmall";
+    }
+    else if (window.innerWidth < 785) {
+        return "small";
+    }
+    else if (window.innerWidth < 1335) {
+        return "medium";
+    }
+    else {
+        return "";
+    }
 }
 
-function useWindowSize(): Size {
+function useWindowSize(): string {
 
     // Initialize state with initial window size
-    const [windowSize, setWindowSize] = useState<Size>({
-      width: window.innerWidth,
-      height: window.innerHeight,
-    });
+    const [windowSize, setWindowSize] = useState<string>(getWindowSize());
 
     // Declare useEffect and handleResize functionality
     useEffect(() => {
 
         // Handler that will be called upon resize
-        function handleResize() {
-            setWindowSize({
-                width: window.innerWidth,
-                height: window.innerHeight,
-            });
-        }
+        const handleResize = () => setWindowSize(getWindowSize());
 
         // Add event listener
         window.addEventListener("resize", handleResize);

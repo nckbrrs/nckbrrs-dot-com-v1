@@ -3,47 +3,9 @@
     height: 100%;
     animation: fadeIn 1s;
 
-    #header {
-        --moveInCircleSize: 1;
-        padding-top: 12vh;
-
-        a {
-            text-decoration: none;
-        }
-
-        #logo-col {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            #nbicon {
-                height: 4.5rem;
-
-                &:first-of-type {
-                    fill: #ff6622;
-                    z-index: -1;
-                    animation: moveInCircle 3s linear 0.5s infinite;
-                    position: absolute;
-                }
-
-                &:nth-of-type(2) {
-                    fill: #2e85ff;
-                    z-index: 1;
-                    position: absolute;
-
-                }
-
-                &:nth-of-type(3) {
-                    fill: #00ffaa;
-                    z-index: -2;
-                    animation: moveInCircle 3s linear infinite;
-                }
-            }
-        }
-    }
-
     #links {
         padding-top: 9vh;
+        --moveInCircleSize: 1;
 
         .bx--row {
             padding-top: $spacing-02;
@@ -54,13 +16,33 @@
 
             .link-text {
                 display: inline-block;
-                font-family: Helvetica;
+                font-family: 'IBM Plex Mono', serif;
                 text-transform: lowercase;
-                font-weight: 700;
-                font-size: 1.5em;
-                color: #212121;
+                font-weight: 600;
+                font-size: 1.6em;
+                color: #2e85ff;
                 text-decoration: none;
-            }
+                z-index: 1;
+                position: relative;
+
+                &:before, &:after {
+                    content:attr(data-content);
+                    position: absolute;
+                    top: 0; left: 0; right: 0; bottom: 0;
+                }
+            
+                &:before {
+                    color: #00ffaa;
+                    z-index: -1;
+                    animation: moveInCircle 3s linear 0.5s infinite;
+                }
+            
+                &:after {
+                    color: #ff6622;
+                    z-index: -2;
+                    animation: moveInCircle 3s linear infinite;
+                }
+            }   
         }
             
         #links-col {
@@ -69,8 +51,6 @@
                     opacity: 0.3;
                 }
             }
-        }
-        
-        
+        } 
     }
 }

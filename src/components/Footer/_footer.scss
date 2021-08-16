@@ -1,0 +1,93 @@
+#footer {
+    animation: fadeIn 2s, slideInFromBelow 1s;
+    padding-top: 17.5vh;
+    padding-bottom: 5.25vh;
+    text-align: center;
+    
+    #links {
+        &:hover {
+            .bx--col:not(:hover) {
+                opacity: 0.3;
+            }
+        }
+
+        .bx--col {
+            padding-left: $spacing-04;
+            padding-right: $spacing-04;
+
+            .link-text {
+                display: inline-block;
+                font-family: Helvetica;
+                text-transform: lowercase;
+                font-weight: 700;
+                font-size: 1.4em;
+                color: #212121;
+                text-decoration: none;
+            }
+
+            svg {
+                height: 40px;
+                fill: #212121;
+                border-radius: 50%;
+                box-shadow: 1px 1px 2px rgb(33,33,33,0.5);
+            }
+        }
+    }
+
+    &.medium {
+        padding-top: 14vh;
+
+        #links .link-text {
+            display: none;
+        }
+    }
+
+    &.small {
+        padding-top: 10vh;
+
+        #links .bx--col {
+            padding-right: $spacing-02 + $spacing-01;
+            padding-left: $spacing-02 + $spacing-01;
+
+            .link-text {
+                display: none;
+            }
+
+            svg {
+                height: 32px;
+            }
+        }
+    }
+
+    &.xsmall {
+        padding-top: 10vh;
+
+        #links {
+            svg {
+                display: none
+            }
+
+            .bx--col:not(#my-stuff-link-col) {
+                display: none;
+            }
+
+            #my-stuff-link-col .link-text {
+                text-decoration: none;
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    &:not(.small):not(.medium):not(.xsmall) {
+        #my-stuff-link-col {
+            display: none;
+        }
+
+        svg {
+            display: none
+        }
+    }
+}

@@ -1,27 +1,19 @@
 import React from "react";
 import { Redirect } from "react-router-dom";
 import { contentConfig } from '../../config/contentConfig';
-import NBIconWithText from "../../assets/icons/NBwithText";
 import useWindowSize from '../../assets/hooks/useWindowSize';
+import Header from '../../components/Header/Header';
 
 const Stuff: React.FC = () => {
   const windowSize = useWindowSize();
 
-  if (windowSize.width > 500) {
+  if (windowSize !== "xsmall") {
     return <Redirect to="/" />
   }
 
   return (
-    <div id="stuff" className="bx--grid bx--grid--full-width">
-      <div id="header" className="bx--row">
-        <div id="logo-col" className="bx--col">
-          <a href="/">
-            <NBIconWithText/>
-            <NBIconWithText/>
-            <NBIconWithText/>
-          </a>
-        </div>
-      </div>
+    <div id="stuff" className={"bx--grid bx--grid--full-width " + windowSize}>
+      <Header/>
       <div id="links">
         <div className="bx--row">
           <div className="bx--col"/>
@@ -31,7 +23,7 @@ const Stuff: React.FC = () => {
               <div className="bx--row">
                 <div className="bx--col link-col">
                   <a href={link['href']}>
-                    <div className="link-text">{link['text']}</div>
+                    <div className="link-text" data-content={link['text']}>{link['text']}</div>
                   </a>
                 </div>
               </div>
