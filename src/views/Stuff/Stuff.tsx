@@ -23,7 +23,9 @@ const Stuff: React.FC = () => {
             return (
               <div className="bx--row">
                 <div className="bx--col link-col">
-                  <div className="link-text" data-content={link['text']}>{link['text']}</div>
+                  <a href={link['href']}>
+                    <div className="link-text" data-content={link['text']}>{link['text']}</div>
+                  </a>
                 </div>
               </div>
             )
