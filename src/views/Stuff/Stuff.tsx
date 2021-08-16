@@ -1,5 +1,5 @@
 import React from "react";
-import { Redirect, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import { contentConfig } from '../../config/contentConfig';
 import useWindowSize from '../../assets/hooks/useWindowSize';
 import Header from '../../components/Header/Header';
@@ -23,7 +23,7 @@ const Stuff: React.FC = () => {
             return (
               <div className="bx--row">
                 <div className="bx--col link-col">
-                  <div className="link-text" data-content={link['text']} onClick={() => history.push('/')}>{link['text']}</div>
+                  <div className="link-text" data-content={link['text']}>{link['text']}</div>
                 </div>
               </div>
             )

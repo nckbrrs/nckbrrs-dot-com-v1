@@ -4,6 +4,17 @@
     padding-left: 12vh;
     padding-right: 12vh;
 
+    #header-text {
+        font-family: Helvetica;
+        text-transform: lowercase;
+        font-weight: 700;
+        font-size: 4rem;
+        white-space: nowrap;
+        color: #212121;
+        width:fit-content;
+        
+    }
+
     #logo-col {
         text-align: right;
 
@@ -13,18 +24,8 @@
         }
     }
 
-    a {
-        text-decoration: none;
-
-        #header-text {
-            font-family: Helvetica;
-            text-transform: lowercase;
-            font-weight: 700;
-            font-size: 4rem;
-            white-space: nowrap;
-            color: #212121;
-            
-        }
+    .header-link:hover {
+        cursor: pointer;
     }
 
     &.medium {
