@@ -79,4 +79,10 @@
             }
         }
     }
+
+    &.redirecting {
+        #main, #footer {
+            animation: slideOutToLeft 1s;   
+        }
+    }
 }

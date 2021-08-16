@@ -1,22 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import useWindowSize from "../../assets/hooks/useWindowSize";
 import { contentConfig } from "../../config/contentConfig";
 
-const Footer: React.FC = () => {
+interface FooterProps {
+    handleMyStuffClick: () => void
+}
+
+const Footer: React.FC<FooterProps> = (props) => {
     const windowSize = useWindowSize();
     const history = useHistory();
-
-
 
     return (
         <div id="footer" className={"bx--row " + windowSize}>
             <div className="bx--col"/>
-            <div id="links" className="bx--row">
+            <div id="links" className={"bx--row"}>
                 <div id="my-stuff-link-col" className="bx--col">
-                    {/* <a href='/stuff'> */}
-                        <div className="link-text" onClick={() => history.push('/stuff')}>My Stuff</div>
-                    {/* </a> */}
+                    <div className="link-text" onClick={props.handleMyStuffClick}>My Stuff</div>
                 </div>
                 {contentConfig['home'].socialLinks.map((link) => {
                     return (

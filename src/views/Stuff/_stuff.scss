@@ -1,11 +1,11 @@
 #stuff {
     min-height: 100vh;
     height: 100%;
-    animation: fadeIn 1s;
 
     #links {
         padding-top: 9vh;
         --moveInCircleSize: 1;
+        animation: slideInFromRight linear 1s;
 
         .bx--row {
             padding-top: $spacing-02;

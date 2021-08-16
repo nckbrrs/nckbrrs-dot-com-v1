@@ -4,7 +4,6 @@ import { Switch, Route, Redirect } from "react-router-dom";
 import Home from "./views/Home";
 import Stuff from "./views/Stuff";
 
-
 class App extends React.Component<{}, {}> {
     render() {
         return (

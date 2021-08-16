@@ -27,6 +27,15 @@
     100% {transform: translate(0px, 0px);}
 }
 
+@keyframes slideOutToLeft {
+    100% {transform: translate(-1000px, 0)}
+}
+
+@keyframes slideInFromRight {
+    0% {transform: translate(1000px, 0)}
+    100% {transform: translate(0px, 0px)}
+}
+
 @keyframes moveInCircle {
     0%, 100%   {transform: translate(calc(var(--moveInCircleSize) * -1px), calc(var(--moveInCircleSize) * 1px));}
     13%  {transform: translate(calc(var(--moveInCircleSize) * -1.5px), calc(var(--moveInCircleSize) * 0px));}

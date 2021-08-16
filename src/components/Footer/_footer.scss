@@ -32,6 +32,10 @@
                 box-shadow: 1px 1px 2px rgb(33,33,33,0.5);
             }
         }
+
+        &.shouldSlide {
+            animation: slideOutToLeft 1s;
+        }
     }
 
     &.medium {
