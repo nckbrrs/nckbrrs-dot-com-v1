@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import { useHistory } from "react-router-dom";
+import React from "react";
 import useWindowSize from "../../assets/hooks/useWindowSize";
 import { contentConfig } from "../../config/contentConfig";
 
@@ -9,7 +8,6 @@ interface FooterProps {
 
 const Footer: React.FC<FooterProps> = (props) => {
     const windowSize = useWindowSize();
-    const history = useHistory();
 
     return (
         <div id="footer" className={"bx--row " + windowSize}>
