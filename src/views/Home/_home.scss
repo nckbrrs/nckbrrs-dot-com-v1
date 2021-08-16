@@ -82,7 +82,7 @@
 
     &.redirecting {
         #main, #footer {
-            animation: slideOutToLeft 1s;   
+            animation: slideOutToLeft 0.5s;   
         }
     }
 }

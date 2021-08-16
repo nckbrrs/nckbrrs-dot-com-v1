@@ -5,7 +5,7 @@
     #links {
         padding-top: 9vh;
         --moveInCircleSize: 1;
-        animation: slideInFromRight linear 1s;
+        animation: slideInFromRight ease 0.1s;
 
         .bx--row {
             padding-top: $spacing-02;
