@@ -7,11 +7,13 @@ import { useHistory } from "react-router-dom";
 
 const Home: React.FC = () => {
   const windowSize = useWindowSize();
-  const history = useHistory();
+  const history = useHistory<{from: string}>();
   const [redirecting, setRedirecting] = useState(false);
 
   const redirectToStuff = () => {
-    history.push('/stuff');
+    history.push('/stuff', {
+      from: '/'
+    });
   }
 
   const onMyStuffClick = () => {
@@ -24,7 +26,14 @@ const Home: React.FC = () => {
     classNames.push(windowSize);
 
     if (redirecting) {
-      classNames.push('redirecting');
+      classNames.push('slideOutToLeft');
+    } else {
+      if (history.location.state?.from && history.location.state.from === '/stuff') {
+        classNames.push('slideInFromLeft');
+      }
+      else {
+        classNames.push('slideInFromBelow');
+      }
     }
 
     return classNames.join(' ');
@@ -32,7 +41,9 @@ const Home: React.FC = () => {
   
   return (
     <div id="home" className={classNames()}>
-      <Header/>
+      <Header
+        handleLogoClick={window.location.reload}
+      />
       <div id="main" className="bx--row">
         <div className="bx--offset-lg-1 bx--col">
           <div id="main-text" data-content={contentConfig['home'].mainText}>

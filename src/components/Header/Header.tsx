@@ -3,21 +3,23 @@ import NBIcon from "../../assets/icons/NB";
 import NBIconWithText from "../../assets/icons/NBwithText";
 import useWindowSize from "../../assets/hooks/useWindowSize";
 import { contentConfig } from "../../config/contentConfig";
-import { useHistory } from "react-router-dom";
 
-const Header: React.FC = () => {
+interface HeaderProps {
+    handleLogoClick: () => void
+}
+
+const Header: React.FC<HeaderProps> = (props) => {
     const windowSize = useWindowSize();
-    const history = useHistory();
 
     return (
         <div id="header" className={"bx--row " + windowSize}>
             <div id="text-col" className="bx--col">
-                <h1 className="header-link" id="header-text" onClick={() => history.push('/')}>
+                <h1 className="header-link" id="header-text" onClick={props.handleLogoClick}>
                     {contentConfig['home'].headerText}
                 </h1>
             </div>
             <div id="logo-col" className="bx--col">
-                <span className="header-link" onClick={() => history.push('/')}>
+                <span className="header-link" onClick={props.handleLogoClick}>
                     <NBIcon />
                     <NBIconWithText/>
                 </span>

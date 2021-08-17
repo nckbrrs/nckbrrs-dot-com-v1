@@ -1,7 +1,6 @@
 #home {
     min-height: 100vh;
     height: 100%;
-    animation: fadeIn 2s, slideInFromBelow 1s;
 
     #main {
         text-align: center;
@@ -27,7 +26,7 @@
             &:before {
                 color: #00ffaa;
                 z-index: -1;
-                animation: moveInCircle 3s linear 0.5s infinite;
+                animation: moveInCircle 4s linear infinite;
             }
         
             &:after {
@@ -80,9 +79,20 @@
         }
     }
 
-    &.redirecting {
+
+    &.slideInFromBottom {
+        animation: slideInFromBelow 1s, fadeIn 2s;
+    }
+
+    &.slideOutToLeft {
         #main, #footer {
             animation: slideOutToLeft 0.5s;   
+        }
+    }
+
+    &.slideInFromLeft {
+        #main, #footer {
+            animation: slideInFromLeft 0.1s;
         }
     }
 }

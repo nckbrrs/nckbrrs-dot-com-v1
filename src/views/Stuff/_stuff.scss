@@ -5,7 +5,6 @@
     #links {
         padding-top: 9vh;
         --moveInCircleSize: 1;
-        animation: slideInFromRight ease 0.1s;
 
         .bx--row {
             padding-top: $spacing-02;
@@ -34,7 +33,7 @@
                 &:before {
                     color: #00ffaa;
                     z-index: -1;
-                    animation: moveInCircle 3s linear 0.5s infinite;
+                    animation: moveInCircle 4s linear infinite;
                 }
             
                 &:after {
@@ -52,5 +51,17 @@
                 }
             }
         } 
+    }
+
+    &.slideInFromRight {
+        #links {
+            animation: slideInFromRight 0.1s;
+        }
+    }
+
+    &.slideOutToRight {
+        #links {
+            animation: slideOutToRight 0.5s;
+        }
     }
 }
