@@ -80,8 +80,10 @@
     }
 
 
-    &.slideInFromBottom {
-        animation: slideInFromBelow 1s, fadeIn 2s;
+    &.slideInFromBelow {
+        #header, #main, #footer {
+            animation: slideInFromBelow 1s, fadeIn 2s;
+        }
     }
 
     &.slideOutToLeft {
