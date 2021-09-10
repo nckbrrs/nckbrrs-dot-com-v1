@@ -1,6 +1,5 @@
 import React from "react";
-import NBIcon from "../../assets/icons/NB";
-import NBIconWithText from "../../assets/icons/NBwithText";
+import N from "../../assets/icons/N";
 import useWindowSize from "../../assets/hooks/useWindowSize";
 import { contentConfig } from "../../config/contentConfig";
 
@@ -20,8 +19,7 @@ const Header: React.FC<HeaderProps> = (props) => {
             </div>
             <div id="logo-col" className="bx--col">
                 <span className="header-link" onClick={props.handleLogoClick}>
-                    <NBIcon />
-                    <NBIconWithText/>
+                    <N/>
                 </span>
             </div>
         </div>

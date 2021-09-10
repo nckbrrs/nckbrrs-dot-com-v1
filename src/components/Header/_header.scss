@@ -20,7 +20,7 @@
 
         svg {
             fill: #212121;
-            height: 4rem;
+            height: 6rem;
         }
     }
 
@@ -31,10 +31,6 @@
     &.medium {
         padding-left: $spacing-06;
         padding-right: $spacing-06;
-
-        #nb-logo-with-text {
-            display: none;
-        }
     }
 
     &.small {
@@ -45,11 +41,7 @@
         #logo-col {
             text-align: center;
 
-            #nb-logo-no-text {
-                display: none;
-            }
-    
-            #nb-logo-with-text {
+            #n-logo {
                 height: 4.5rem;
             }
         }
@@ -63,19 +55,9 @@
         #logo-col {
             text-align: center;
 
-            #nb-logo-no-text {
-                display: none;
-            }
-
-            #nb-logo-with-text {
+            #n-logo {
                 height: 4.5rem;
             }
-        }
-    }
-
-    &:not(.small):not(.medium):not(.xsmall) {
-        #nb-logo-with-text {
-            display: none;
         }
     }
 }
