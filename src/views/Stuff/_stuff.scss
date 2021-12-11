@@ -1,5 +1,4 @@
 #stuff {
-    min-height: calc(100vh - env(safe-area-inset-bottom));
     max-height: calc(100vh - env(safe-area-inset-bottom));
     display: flex;
     flex-flow: column nowrap;
