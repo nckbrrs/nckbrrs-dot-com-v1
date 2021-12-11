@@ -1,63 +1,66 @@
 #header {
-    text-align: left;
-    padding-top: 12vh;
-    padding-left: 12vh;
-    padding-right: 12vh;
+    display: flex;
+    justify-content: center;
+    width: 85%;
+    height: 6rem;
 
-    #header-text {
-        font-family: Helvetica;
-        text-transform: lowercase;
-        font-weight: 700;
-        font-size: 4rem;
-        white-space: nowrap;
-        color: #212121;
-        width:fit-content;
-        
-    }
+    .header-link {
+        width: 50%;
+        height: 100%;
+        display: inline-flex;
+        flex-flow: column nowrap;
 
-    #logo-col {
-        text-align: right;
-
-        svg {
-            fill: #212121;
-            height: 6rem;
+        &:hover {
+            cursor: pointer;
         }
     }
 
-    .header-link:hover {
-        cursor: pointer;
+    #text-col {
+        align-items: flex-start;
+        justify-content: center;
+
+        span {
+            font-family: Helvetica;
+            text-transform: lowercase;
+            font-weight: 700;
+            font-size: 4rem;
+            white-space: nowrap;
+            color: #313131;
+        }
     }
 
-    &.medium {
-        padding-left: $spacing-06;
-        padding-right: $spacing-06;
+    #logo-col {
+        align-items: flex-end;
+        justify-content: center;
+
+        svg {
+            height: 100%;
+            fill: #313131;
+            text-shadow: 5px 5px 2px black;
+        }
     }
 
     &.small {
+        height: 4.5rem;
+
         #text-col {
             display: none;
         }
 
         #logo-col {
-            text-align: center;
-
-            #n-logo {
-                height: 4.5rem;
-            }
+            align-items: center;
         }
     }
 
     &.xsmall {
+        height: 4.5rem;
+
         #text-col {
             display: none;
         }
 
         #logo-col {
-            text-align: center;
-
-            #n-logo {
-                height: 4.5rem;
-            }
+            align-items: center;
         }
     }
 }

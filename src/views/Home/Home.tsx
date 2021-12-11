@@ -4,25 +4,33 @@ import Header from '../../components/Header';
 import useWindowSize from '../../assets/hooks/useWindowSize';
 import Footer from "../../components/Footer/Footer";
 import { useHistory } from "react-router-dom";
+import { RedirectDestinationType } from "../../types/types";
 
 const Home: React.FC = () => {
   const windowSize = useWindowSize();
   const history = useHistory<{from: string}>();
   const [redirecting, setRedirecting] = useState(false);
 
-  const redirectToStuff = () => {
-    history.push('/stuff', {
-      from: '/'
-    });
+  const redirectInternal = (url: string) => {
+    history.push(`/${url}`, {from: '/'})
   }
 
-  const onMyStuffClick = () => {
+  const redirectExternal = (url: string) => {
+    window.location.href = url;
+  }
+
+  const redirect = (url: string, destType: RedirectDestinationType) => {
+    if (destType === RedirectDestinationType.Internal) {
       setRedirecting(true);
-      setTimeout(redirectToStuff, 150);
+      setTimeout(() => redirectInternal(url), 100);
+      
+    } else {
+      redirectExternal(url);
+    }
   }
 
   const classNames = () => {
-    const classNames = ['bx--grid', 'bx--grid--full-width'];
+    const classNames: string[] = [];
     classNames.push(windowSize);
 
     if (redirecting) {
@@ -41,20 +49,13 @@ const Home: React.FC = () => {
   
   return (
     <div id="home" className={classNames()}>
-      <Header
-        handleLogoClick={window.location.reload}
-      />
-      <div id="main" className="bx--row">
-        <div className="bx--offset-lg-1 bx--col">
-          <div id="main-text" data-content={contentConfig['home'].mainText}>
-            {contentConfig['home'].mainText}
-          </div>
-        </div>
-        <div className="bx--col-lg-1"/>
+      <Header handleLogoClick={window.location.reload}/>
+      <div id="main-text">
+        {[0, 1, 2].map(() => (
+          <span>{contentConfig['home'].mainText}</span>
+        ))}
       </div>
-      <Footer
-        handleMyStuffClick={onMyStuffClick}
-      />
+      <Footer handleMyStuffClick={redirect}/>
     </div>
   )
 }

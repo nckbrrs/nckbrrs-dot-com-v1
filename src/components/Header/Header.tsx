@@ -11,16 +11,12 @@ const Header: React.FC<HeaderProps> = (props) => {
     const windowSize = useWindowSize();
 
     return (
-        <div id="header" className={"bx--row " + windowSize}>
-            <div id="text-col" className="bx--col">
-                <h1 className="header-link" id="header-text" onClick={props.handleLogoClick}>
-                    {contentConfig['home'].headerText}
-                </h1>
+        <div id="header" className={windowSize}>
+            <div id="text-col" className="header-link" onClick={props.handleLogoClick}>
+                <span>{contentConfig['home'].headerText}</span>
             </div>
-            <div id="logo-col" className="bx--col">
-                <span className="header-link" onClick={props.handleLogoClick}>
-                    <N/>
-                </span>
+            <div id="logo-col" className="header-link" onClick={props.handleLogoClick}>
+                <N/>
             </div>
         </div>
     );

@@ -1,99 +1,102 @@
 #home {
     min-height: 100vh;
     height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12vh 12vh 12vh 12vh;
 
-    #main {
-        text-align: center;
-        font-size: 3.6rem;
-        font-weight: 600;
-        padding-top: 17.5vh;
-        --moveInCircleSize: 1;
+    #main-text {
+        display: flex;
+        flex-flow: row nowrap;
 
-        #main-text {
+        span {
+            text-align: center;
             font-family: 'IBM Plex Mono', monospace;
+            font-size: 3.6rem;
+            font-weight: 600;
             color: #2e85ff;
             line-height: 1.6em;
-            position: relative;
-            display: inline-block;
-            z-index: 1;
-        
-            &:before, &:after {
-                content:attr(data-content);
-                position: absolute;
-                top: 0; left: 0; right: 0; bottom: 0;
+            z-index: 0;
+
+            &:not(:nth-of-type(1)) {
+                margin-left: -100%;
             }
-        
-            &:before {
+
+            &:nth-of-type(2) {
                 color: #00ffaa;
+                opacity: 0.8;
                 z-index: -1;
-                animation: moveInCircle 4s linear infinite;
+                animation: moveInCircle 1.5s linear infinite;
+                
             }
-        
-            &:after {
+
+            &:nth-of-type(3) {
                 color: #ff6622;
-                z-index: -2;
-                animation: moveInCircle 3s linear infinite;
+                opacity: 0.8;
+                z-index: -1;
+                animation: moveInCircle 1.5s linear infinite 0.75s;
             }
         }
     }
 
     &.medium {
-        min-height: 0px;
+        padding: 12vh 10vh 10vh 12vh;
 
-        #main {
-            padding-top: 14vh;
-            font-size: 2.75rem;
-
-            #main-text,#main-text:before,#main-text:after {
-                padding-left: $spacing-07;
-                padding-right: $spacing-07;
+        #main-text {
+            span {
+                font-size: 2.75rem;
             }
         }
     }
 
     &.small {
-        min-height: 0px;
+        #main-text {
+            width: 100%;
 
-        #main {
-            font-size: 1.8rem;
-            padding-top: 9vh;
-
-            #main-text, #main-text:before, #main-text:after {
-                padding-left: $spacing-04;
-                padding-right: $spacing-04;
+            span {
+                font-size: 1.8rem;
             }
         }
     }
 
     &.xsmall {
-        min-height: 0px;
+        padding-left: 36px;
+        padding-right: 36px;
 
-        #main {
-            font-size: 1.9rem;
-            padding-top: 9vh;
+        #main-text {
+            width: 100%;
+            
 
-            #main-text, #main-text:before, #main-text:after {
-                padding-left: $spacing-04;
-                padding-right: $spacing-04;
+            span {
+                font-size: 1.9rem;
             }
         }
     }
 
+    &:not(.medium):not(.small):not(.xsmall) {
+        padding: 12vh 12vh 12vh 12vh;
+
+        #main-text {
+            width: 85%;
+        }
+    }
 
     &.slideInFromBelow {
-        #header, #main, #footer {
+        #header, #main-text, #footer {
             animation: slideInFromBelow 1s, fadeIn 2s;
         }
     }
 
     &.slideOutToLeft {
-        #main, #footer {
+        #main-text, #footer {
             animation: slideOutToLeft 0.5s;   
         }
     }
 
     &.slideInFromLeft {
-        #main, #footer {
+        #main-text, #footer {
             animation: slideInFromLeft 0.1s;
         }
     }

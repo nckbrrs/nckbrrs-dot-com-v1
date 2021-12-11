@@ -3,25 +3,33 @@ import { useHistory } from "react-router-dom";
 import { contentConfig } from '../../config/contentConfig';
 import useWindowSize from '../../assets/hooks/useWindowSize';
 import Header from '../../components/Header/Header';
+import { RedirectDestinationType } from "../../types/types";
 
 const Stuff: React.FC = () => {
   const windowSize = useWindowSize();
   const history = useHistory<{from: string}>();
   const [redirecting, setRedirecting] = useState(false);
 
-  const redirectToHome = () => {
-    history.push('/', {
-      from: '/stuff'
-    });
+  const redirectInternal = (url: string) => {
+    history.push(`/${url}`, {from: '/stuff'})
   }
 
-  const onLogoClick = () => {
-    setRedirecting(true);
-    setTimeout(redirectToHome, 150);
+  const redirectExternal = (url: string) => {
+    window.location.href = url;
+  }
+
+  const redirect = (url: string, destType: RedirectDestinationType) => {
+    if (destType === RedirectDestinationType.Internal) {
+      setRedirecting(true);
+      setTimeout(() => redirectInternal(url), 100);
+      
+    } else {
+      redirectExternal(url);
+    }
   }
 
   const classNames = () => {
-    const classNames = ['bx--grid', 'bx--grid--full-width'];
+    const classNames: string[] = [];
     classNames.push(windowSize);
 
     if (redirecting) {
@@ -36,34 +44,25 @@ const Stuff: React.FC = () => {
   }
 
   if (windowSize !== "xsmall") {
-    redirectToHome();
+    redirect('/', RedirectDestinationType.Internal);
   }
 
 
   return (
     <div id="stuff" className={classNames()}>
-      <Header
-        handleLogoClick={onLogoClick}
-      />
+      <Header handleLogoClick={() => redirect('', RedirectDestinationType.Internal)}/>
       <div id="links">
-        <div className="bx--row">
-          <div className="bx--col"/>
-          <div id="links-col" className="bx--col">
-            {contentConfig['home'].socialLinks.map((link) =>  {
-              return (
-                <div className="bx--row">
-                  <div className="bx--col link-col">
-                    <a href={link['href']}>
-                      <div className="link-text" data-content={link['text']}>{link['text']}</div>
-                    </a>
-                  </div>
-                </div>
-              )
-            })}
+        {[0, 1, 2].map(() => (
+          <div className="container">
+            {contentConfig['home'].socialLinks.map((link) =>  (
+              <span onClick={() => redirect(link['href'], RedirectDestinationType.External)}>
+                {link['text']}
+              </span>
+            ))}
           </div>
-          <div className="bx--col"/>
-        </div>
+        ))}
       </div>
+      <div/>
     </div>
   )
 }

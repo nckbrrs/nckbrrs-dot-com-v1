@@ -18,12 +18,6 @@ class App extends React.Component<{}, {}> {
                         exact path="/stuff"
                         render={() => <Stuff/>}
                     />
-                    {/*
-                    <Route
-                        exact path="/resume"
-                        render={() => <Resume/>}
-                    />
-                    */}
                     <Route
                         path="*"
                         render={() => <Redirect to="/"/>}

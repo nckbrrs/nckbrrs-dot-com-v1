@@ -14,8 +14,6 @@
 @import "./components/Footer/footer.scss";
 @import "./views/Home/home.scss";
 @import "./views/Stuff/stuff.scss";
-@import "./views/Resume/resume.scss";
-
 
 @keyframes fadeIn {
     0%   {opacity: 0;}
@@ -47,12 +45,12 @@
 }
 
 @keyframes moveInCircle {
-    0%, 100%   {transform: translate(calc(var(--moveInCircleSize) * -1px), calc(var(--moveInCircleSize) * 1px));}
-    13%  {transform: translate(calc(var(--moveInCircleSize) * -1.5px), calc(var(--moveInCircleSize) * 0px));}
-    25%  {transform: translate(calc(var(--moveInCircleSize) * -1px), calc(var(--moveInCircleSize) * -1px));}
-    38%  {transform: translate(calc(var(--moveInCircleSize) * 0px), calc(var(--moveInCircleSize) * -1.5px));}
-    50%  {transform: translate(calc(var(--moveInCircleSize) * 1px), calc(var(--moveInCircleSize) * -1px));}
-    63%  {transform: translate(calc(var(--moveInCircleSize) * 1.5px), calc(var(--moveInCircleSize) * 0px));}
-    75%  {transform: translate(calc(var(--moveInCircleSize) * 1px), calc(var(--moveInCircleSize) * 1px));}
-    88%  {transform: translate(calc(var(--moveInCircleSize) * 0px), calc(var(--moveInCircleSize) * 1.5px));}
+    0%, 100%   {transform: translate(calc(1 * -1px), calc(1 * 1px));}
+    13%  {transform: translate(calc(1 * -1.5px), calc(1 * 0px));}
+    25%  {transform: translate(calc(1 * -1px), calc(1 * -1px));}
+    38%  {transform: translate(calc(1 * 0px), calc(1 * -1.5px));}
+    50%  {transform: translate(calc(1 * 1px), calc(1 * -1px));}
+    63%  {transform: translate(calc(1 * 1.5px), calc(1 * 0px));}
+    75%  {transform: translate(calc(1 * 1px), calc(1 * 1px));}
+    88%  {transform: translate(calc(1 * 0px), calc(1 * 1.5px));}
 }

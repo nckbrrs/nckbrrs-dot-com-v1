@@ -1,56 +1,61 @@
 #stuff {
     min-height: 100vh;
     height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12vh 12vh 12vh;
 
     #links {
-        padding-top: 9vh;
-        --moveInCircleSize: 1;
+        display: flex;
+        flex-flow: row nowrap;
+        width: 100%;
 
-        .bx--row {
-            padding-top: $spacing-02;
-        }
+        .container {
+            width: 100%;
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: center;
 
-        .link-col {
-            text-align: center;
-
-            .link-text {
-                display: inline-block;
-                font-family: 'IBM Plex Mono', monospace;
-                text-transform: lowercase;
-                font-weight: 600;
-                font-size: 1.6em;
-                color: #2e85ff;
-                text-decoration: none;
-                z-index: 1;
-                position: relative;
-
-                &:before, &:after {
-                    content:attr(data-content);
-                    position: absolute;
-                    top: 0; left: 0; right: 0; bottom: 0;
-                }
-            
-                &:before {
-                    color: #00ffaa;
-                    z-index: -1;
-                    animation: moveInCircle 4s linear infinite;
-                }
-            
-                &:after {
-                    color: #ff6622;
-                    z-index: -2;
-                    animation: moveInCircle 3s linear infinite;
-                }
-            }   
-        }
-            
-        #links-col {
             &:hover {
-                .bx--row:not(:hover) {
+                span:not(:hover) {
                     opacity: 0.3;
                 }
             }
-        } 
+
+            span {
+                font-family: 'IBM Plex Mono', monospace;
+                font-size: 1.6em;
+                font-weight: 600;
+                color: #2e85ff;
+                text-transform: lowercase;
+                z-index: 0;
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+
+            &:not(:nth-of-type(1)) {
+                margin-left: -100%;
+            }
+
+            &:nth-of-type(2) span {
+                color: #00ffaa;
+                opacity: 0.8;
+                z-index: -1;
+                animation: moveInCircle 1.5s linear infinite;
+                
+            }
+
+            &:nth-of-type(3) span {
+                color: #ff6622;
+                opacity: 0.8;
+                z-index: -2;
+                animation: moveInCircle 1.5s linear infinite 0.75s;
+            }
+        }
     }
 
     &.slideInFromRight {

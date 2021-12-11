@@ -1,2 +1,1 @@
-import Stuff from './Stuff';
-export default Stuff;
+export { default } from './Stuff';
