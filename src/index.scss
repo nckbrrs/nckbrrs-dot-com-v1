@@ -1,7 +1,8 @@
-// Feature flags
-$css--font-face: true;
-$css--plex: true;
+html, body {
+  margin: 0;
+  padding: 0;
+}
 
-// Global styles
-@import 'carbon-components/scss/globals/scss/css--font-face';
-@import 'carbon-components/scss/globals/grid/grid';
+* {
+    box-sizing: border-box;
+}

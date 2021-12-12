@@ -1,11 +1,12 @@
 #home {
-    min-height: calc(100vh - env(safe-area-inset-bottom) - env(safe-area-inset-top) - 50px);
-    max-height: calc(100vh - env(safe-area-inset-bottom) - env(safe-area-inset-top));
+    height: 100vh;
+    width: 100vw;
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-between;
     align-items: center;
     padding: 12vh 12vh 12vh 12vh;
+    overflow: hidden;
 
     #main-text {
         display: flex;
