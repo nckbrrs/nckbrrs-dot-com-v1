@@ -1,13 +1,13 @@
 import { useState, useEffect } from "react";
 
 const getWindowSize = () => {
-    if (window.innerWidth < 485) {
-        return "xsmall";
+    if (window.innerWidth < 480) {
+        return "mobile";
     }
-    else if (window.innerWidth < 785) {
+    else if (window.innerWidth < 780) {
         return "small";
     }
-    else if (window.innerWidth < 1335) {
+    else if (window.innerWidth < 1200) {
         return "medium";
     }
     else {

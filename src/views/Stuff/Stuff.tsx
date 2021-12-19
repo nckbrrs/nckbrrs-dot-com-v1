@@ -43,7 +43,7 @@ const Stuff: React.FC = () => {
     return classNames.join(' ');
   }
 
-  if (windowSize !== "xsmall") {
+  if (windowSize !== "mobile") {
     redirect('/', RedirectDestinationType.Internal);
   }
 

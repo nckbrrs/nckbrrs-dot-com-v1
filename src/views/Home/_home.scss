@@ -62,7 +62,7 @@
         }
     }
 
-    &.xsmall {
+    &.mobile {
         padding-left: 36px;
         padding-right: 36px;
         max-height: 650px;
@@ -77,7 +77,7 @@
         }
     }
 
-    &:not(.medium):not(.small):not(.xsmall) {
+    &:not(.medium):not(.small):not(.mobile) {
         padding: 12vh 12vh 12vh 12vh;
 
         #main-text {
