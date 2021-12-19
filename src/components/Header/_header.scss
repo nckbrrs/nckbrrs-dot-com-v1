@@ -2,7 +2,6 @@
     display: flex;
     justify-content: center;
     width: 85%;
-    height: 6rem;
 
     .header-link {
         width: 50%;
@@ -36,23 +35,14 @@
         svg {
             height: 100%;
             fill: #313131;
-            text-shadow: 5px 5px 2px black;
         }
     }
 
-    &.small {
-        height: 4.5rem;
-
-        #text-col {
-            display: none;
-        }
-
-        #logo-col {
-            align-items: center;
-        }
+    &.large, &.medium {
+        height: 6rem;
     }
 
-    &.mobile {
+    &.small, &.mobile {
         height: 4.5rem;
 
         #text-col {

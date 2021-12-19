@@ -11,11 +11,13 @@ class App extends React.Component<{}, {}> {
             <div id="App" className="App">
                 <Switch>
                     <Route
-                        exact path="/"
+                        exact
+                        path="/"
                         render={() => <Home/>}
                     />
                     <Route
-                        exact path="/stuff"
+                        exact
+                        path="/stuff"
                         render={() => <Stuff/>}
                     />
                     <Route

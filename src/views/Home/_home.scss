@@ -5,8 +5,7 @@
     flex-flow: column nowrap;
     justify-content: space-between;
     align-items: center;
-    padding: 12vh 12vh 12vh 12vh;
-    overflow: hidden;
+    padding: 12vh;
 
     #main-text {
         display: flex;
@@ -15,7 +14,6 @@
         span {
             text-align: center;
             font-family: 'IBM Plex Mono', monospace;
-            font-size: 3.6rem;
             font-weight: 600;
             color: #2e85ff;
             line-height: 1.6em;
@@ -30,7 +28,6 @@
                 opacity: 0.8;
                 z-index: -1;
                 animation: moveInCircle 1.5s linear infinite;
-                
             }
 
             &:nth-of-type(3) {
@@ -42,46 +39,27 @@
         }
     }
 
-    &.medium {
-        padding: 12vh 10vh 10vh 12vh;
-
-        #main-text {
-            span {
-                font-size: 2.75rem;
-            }
-        }
+    &.large #main-text span {
+        font-size: 3.6rem;
     }
 
-    &.small {
-        #main-text {
-            width: 100%;
+    &.medium #main-text span {
+        font-size: 2.75rem;
+    }
 
-            span {
-                font-size: 1.8rem;
-            }
-        }
+    &.small #main-text span {
+        font-size: 1.8rem;
     }
 
     &.mobile {
-        padding-left: 36px;
-        padding-right: 36px;
         max-height: 650px;
 
         #main-text {
             width: 100%;
-            
 
             span {
-                font-size: 1.9rem;
+                font-size: 1.6rem;
             }
-        }
-    }
-
-    &:not(.medium):not(.small):not(.mobile) {
-        padding: 12vh 12vh 12vh 12vh;
-
-        #main-text {
-            width: 85%;
         }
     }
 

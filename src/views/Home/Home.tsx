@@ -30,18 +30,15 @@ const Home: React.FC = () => {
   }
 
   const classNames = () => {
-    const classNames: string[] = [];
-    classNames.push(windowSize);
+    const classNames: string[] = [windowSize];
+    const fromPath = history.location.state?.from;
 
     if (redirecting) {
       classNames.push('slideOutToLeft');
+    } else if (fromPath === '/stuff') {
+      classNames.push('slideInFromLeft');
     } else {
-      if (history.location.state?.from && history.location.state.from === '/stuff') {
-        classNames.push('slideInFromLeft');
-      }
-      else {
-        classNames.push('slideInFromBelow');
-      }
+      classNames.push('slideInFromBelow');
     }
 
     return classNames.join(' ');
@@ -51,7 +48,7 @@ const Home: React.FC = () => {
     <div id="home" className={classNames()}>
       <Header handleLogoClick={window.location.reload}/>
       <div id="main-text">
-        {[0, 1, 2].map(() => (
+        {Array(3).fill(null).map(() => (
           <span>{contentConfig['home'].mainText}</span>
         ))}
       </div>

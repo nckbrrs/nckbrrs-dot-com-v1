@@ -29,15 +29,13 @@ const Stuff: React.FC = () => {
   }
 
   const classNames = () => {
-    const classNames: string[] = [];
-    classNames.push(windowSize);
+    const classNames: string[] = [windowSize];
+    const fromPath = history.location.state.from;
 
     if (redirecting) {
       classNames.push('slideOutToRight');
-    } else {
-      if (history.location.state.from === '/') {
-        classNames.push('slideInFromRight');
-      }
+    } else if (fromPath === '/') {
+      classNames.push('slideInFromRight');
     }
 
     return classNames.join(' ');
@@ -47,12 +45,11 @@ const Stuff: React.FC = () => {
     redirect('/', RedirectDestinationType.Internal);
   }
 
-
   return (
     <div id="stuff" className={classNames()}>
       <Header handleLogoClick={() => redirect('', RedirectDestinationType.Internal)}/>
       <div id="links">
-        {[0, 1, 2].map(() => (
+        {new Array(3).fill(null).map(() => (
           <div className="container">
             {contentConfig['home'].socialLinks.map((link) =>  (
               <span onClick={() => redirect(link['href'], RedirectDestinationType.External)}>

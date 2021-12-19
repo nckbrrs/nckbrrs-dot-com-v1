@@ -11,7 +11,7 @@ const getWindowSize = () => {
         return "medium";
     }
     else {
-        return "";
+        return "large";
     }
 }
 

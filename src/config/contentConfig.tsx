@@ -5,7 +5,6 @@ import GithubIcon from '../assets/icons/GitHub';
 import InstagramIcon from '../assets/icons/Instagram';
 import LinkedinIcon from '../assets/icons/Linkedin';
 import SpotifyIcon from '../assets/icons/Spotify';
-//import SoundcloudIcon from '../assets/icons/Soundcloud';
 import YoutubeIcon from '../assets/icons/Youtube';
 import ResumeIcon from '../assets/icons/Resume';
 import ResumePDF from '../assets/images/resume.pdf';

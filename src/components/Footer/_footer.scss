@@ -5,7 +5,6 @@
     
     .footer-link {
         font-family: Helvetica, Arial, sans-serif;
-        font-size: 1.5em;
         font-weight: 700;
         text-transform: lowercase;
         text-decoration: none;
@@ -24,9 +23,23 @@
         }
     }
 
+    &.large {
+        .footer-link {
+            font-size: 1.5em;
+        }
+
+        #my-stuff-link {
+            display: none;
+        }
+
+        svg {
+            display: none
+        }
+    }
+
     &.medium {
         .footer-link {
-            margin: 0px 12px 0px 12px;
+            margin: 0px 12px;
 
             span {
                 display: none;
@@ -45,14 +58,12 @@
 
     &.small {
         .footer-link {
-            margin: 0px 6px 0px 6px;
+            margin: 0px 6px;
 
             span {
                 display: none;
             }
         }
-
-        .footer-link 
 
         svg {
             height: 32px;
@@ -64,16 +75,6 @@
             display: none;
         } 
         
-        svg {
-            display: none
-        }
-    }
-
-    &:not(.small):not(.medium):not(.mobile) {
-        #my-stuff-link {
-            display: none;
-        }
-
         svg {
             display: none
         }
