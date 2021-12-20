@@ -5,6 +5,7 @@
     
     .footer-link {
         font-family: Helvetica, Arial, sans-serif;
+        font-size: 1.5em;
         font-weight: 700;
         text-transform: lowercase;
         text-decoration: none;
@@ -24,10 +25,6 @@
     }
 
     &.large {
-        .footer-link {
-            font-size: 1.5em;
-        }
-
         #my-stuff-link {
             display: none;
         }
