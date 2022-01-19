@@ -1,11 +1,24 @@
+import React from "react";
 import ReactDOM from 'react-dom';
-import App from './App';
 import { BrowserRouter } from 'react-router-dom';
-import './index.scss';
+import './styles/index.scss';
+import { Switch, Route, Redirect } from "react-router-dom";
+import Home from "./views/Home";
+
+const App:React.FC = () => {
+	return (
+		<div id="App" className="App">
+			<BrowserRouter>
+				<Switch>
+					<Route exact path="/" render={() => <Home/>}/>
+					<Route path="*" render={() => <Redirect to="/"/>}/>
+				</Switch>
+			</BrowserRouter>
+		</div>
+	)
+}
 
 ReactDOM.render(
-  	<BrowserRouter>
-    	<App />
-  	</BrowserRouter>,
-  	document.getElementById('root')
+	<App/>, 
+	document.getElementById('root')
 );

@@ -6,45 +6,8 @@ import Header from '../../components/Header/Header';
 import { RedirectDestinationType } from "../../types/types";
 
 const Stuff: React.FC = () => {
-  const windowSize = useWindowSize();
-  const history = useHistory<{from: string}>();
-  const [redirecting, setRedirecting] = useState(false);
 
-  const redirectInternal = (url: string) => {
-    history.push(`/${url}`, {from: '/stuff'})
-  }
-
-  const redirectExternal = (url: string) => {
-    window.location.href = url;
-  }
-
-  const redirect = (url: string, destType: RedirectDestinationType) => {
-    if (destType === RedirectDestinationType.Internal) {
-      setRedirecting(true);
-      setTimeout(() => redirectInternal(url), 100);
-      
-    } else {
-      redirectExternal(url);
-    }
-  }
-
-  const classNames = () => {
-    const classNames: string[] = [windowSize];
-    const fromPath = history.location.state.from;
-
-    if (redirecting) {
-      classNames.push('slideOutToRight');
-    } else if (fromPath === '/') {
-      classNames.push('slideInFromRight');
-    }
-
-    return classNames.join(' ');
-  }
-
-  if (windowSize !== "mobile") {
-    redirect('/', RedirectDestinationType.Internal);
-  }
-
+  /*
   return (
     <div id="stuff" className={classNames()}>
       <Header handleLogoClick={() => redirect('', RedirectDestinationType.Internal)}/>
@@ -62,6 +25,9 @@ const Stuff: React.FC = () => {
       <div/>
     </div>
   )
+  */
+
+  return (<><h1>hey</h1></>);
 }
 
 export default Stuff;

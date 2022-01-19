@@ -2,10 +2,19 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@100;200;300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100;200;300;400;500;600;700&display=swap');
 
-@import "./components/Header/header.scss";
-@import "./components/Footer/footer.scss";
-@import "./views/Home/home.scss";
-@import "./views/Stuff/stuff.scss";
+@import "./header.scss";
+@import "./footer.scss";
+@import "./home.scss";
+@import "./stuff.scss";
+
+html, body {
+  	margin: 0;
+  	padding: 0;
+}
+
+* {
+  	box-sizing: border-box;
+}
 
 @keyframes fadeIn {
     0%   {opacity: 0;}

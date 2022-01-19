@@ -10,6 +10,12 @@ const Home: React.FC = () => {
   const windowSize = useWindowSize();
   const history = useHistory<{from: string}>();
   const [redirecting, setRedirecting] = useState(false);
+  const bool = true;
+
+  const classNames = () => {
+    const classNames: string[] = [windowSize];
+    return classNames.join(' ');
+  }
 
   const redirectInternal = (url: string) => {
     history.push(`/${url}`, {from: '/'})
@@ -28,31 +34,30 @@ const Home: React.FC = () => {
       redirectExternal(url);
     }
   }
-
-  const classNames = () => {
-    const classNames: string[] = [windowSize];
-    const fromPath = history.location.state?.from;
-
-    if (redirecting) {
-      classNames.push('slideOutToLeft');
-    } else if (fromPath === '/stuff') {
-      classNames.push('slideInFromLeft');
-    } else {
-      classNames.push('slideInFromBelow');
-    }
-
-    return classNames.join(' ');
-  }
   
   return (
     <div id="home" className={classNames()}>
       <Header handleLogoClick={window.location.reload}/>
-      <div id="main-text">
-        {Array(3).fill(null).map(() => (
-          <span>{contentConfig['home'].mainText}</span>
-        ))}
+      <div id="main">
+        <>
+        {(
+          bool ? (
+          <div>
+            <span>{contentConfig['home'].mainText}</span>
+          </div>
+          ) : (
+          <div>
+          {contentConfig['home'].socialLinks.map((link) =>  (
+            <span onClick={() => redirect(link['href'], RedirectDestinationType.External)}>
+              {link['text'].toLowerCase()}
+            </span> 
+          ))}
+          </div>
+          )
+        )}
+        </>
       </div>
-      <Footer handleMyStuffClick={redirect}/>
+      <Footer handleMyStuffClick={() => { return; }}/>
     </div>
   )
 }

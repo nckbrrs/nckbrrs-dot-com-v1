@@ -1,7 +1,8 @@
 #header {
     display: flex;
-    justify-content: center;
-    width: 85%;
+    justify-content: space-between;
+    align-content: center;
+    min-width: 500px;
 
     .header-link {
         width: 50%;
@@ -39,10 +40,12 @@
     }
 
     &.large, &.medium {
+        width: 100%;
         height: 6rem;
     }
 
     &.small, &.mobile {
+        justify-content: center;
         height: 4.5rem;
 
         #text-col {
