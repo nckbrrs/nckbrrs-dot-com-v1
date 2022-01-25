@@ -5,7 +5,7 @@ const getWindowSize = (): WindowSizes => {
     if (window.innerWidth < 480) {  
         return WindowSizes.Mobile;
     }
-    else if (window.innerWidth < 780) {
+    else if (window.innerWidth < 800) {
         return WindowSizes.Small;
     }
     else if (window.innerWidth < 1200) {
