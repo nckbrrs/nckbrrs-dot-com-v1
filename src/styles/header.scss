@@ -1,5 +1,6 @@
 #header {
     display: flex;
+    flex-flow: row nowrap;
     justify-content: space-between;
     align-content: center;
     min-width: 500px;
@@ -47,10 +48,6 @@
     &.small, &.mobile {
         justify-content: center;
         height: 4.5rem;
-
-        #text-col {
-            display: none;
-        }
 
         #logo-col {
             align-items: center;

@@ -1,0 +1,48 @@
+#links {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    position: relative; 
+    width: 100%;
+
+    .links-instance {
+        position: absolute;
+        text-align: center;
+        line-height: 1.1em;
+        z-index: -1;
+
+        &#b {
+            z-index: 0;
+
+            span {
+                color: #2e85ff;
+            }
+        }
+
+        &#g {
+            animation: moveInCircle 1.5s linear infinite;
+
+            span {
+                color: #ff6622;
+            }
+           
+        }
+
+        &#r {
+            animation: moveInCircle 1.5s linear infinite 0.75s;
+
+            span {
+                color: #00ffaa;
+            }
+        }
+
+        &:hover {
+            cursor: pointer;
+
+            span:not(:hover) {
+                opacity: 0;
+            }
+        }
+    }
+}

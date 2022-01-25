@@ -57,16 +57,16 @@ export const contentConfig = {
                 "icon": <LinkedinIcon/>
             },
             {
-                "name": "email",
-                "text": "CONTACT",
-                "href": "mailto:nckbrrs@icloud.com",
-                "icon": <EmailIcon/>
-            },
-            {
                 "name": "resume",
                 "text": "RESUME",
                 "href": ResumePDF,
                 "icon": <ResumeIcon/>
+            },
+            {
+                "name": "email",
+                "text": "CONTACT",
+                "href": "mailto:nckbrrs@icloud.com",
+                "icon": <EmailIcon/>
             }
         ]
     }

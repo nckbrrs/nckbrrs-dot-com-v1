@@ -1,0 +1,44 @@
+#main {
+    display: flex;
+    flex-flow: row nowrap;
+    width: 100%;
+    height: 100%;
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 600;
+
+    &.large {
+        font-size: 3.6rem;
+    }
+
+    &.medium {
+        font-size: 2.75rem;
+    }
+
+    &.small {
+        font-size: 1.8rem;
+    }
+
+    &.mobile {
+        font-size: 1.6rem;
+    }
+
+    &.slideLeft {
+        #about {
+            animation: slideOutToLeft 0.333s !important;
+        }
+
+        #links {
+            animation: slideInFromRight 0.333s !important;
+        }
+    }
+
+    &.slideRight {
+        #about {
+            animation: slideInFromLeft 0.333s !important;
+        }
+
+        #links {
+            animation: slideOutToRight 0.333s !important;
+        }
+    }
+}

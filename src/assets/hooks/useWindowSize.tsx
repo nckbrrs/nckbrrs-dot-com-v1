@@ -1,24 +1,25 @@
 import { useState, useEffect } from "react";
+import { WindowSizes } from "../../types/types";
 
-const getWindowSize = () => {
-    if (window.innerWidth < 480) {
-        return "mobile";
+const getWindowSize = (): WindowSizes => {
+    if (window.innerWidth < 480) {  
+        return WindowSizes.Mobile;
     }
     else if (window.innerWidth < 780) {
-        return "small";
+        return WindowSizes.Small;
     }
     else if (window.innerWidth < 1200) {
-        return "medium";
+        return WindowSizes.Medium;
     }
     else {
-        return "large";
+        return WindowSizes.Large;
     }
 }
 
-function useWindowSize(): string {
+function useWindowSize(): WindowSizes {
 
     // Initialize state with initial window size
-    const [windowSize, setWindowSize] = useState<string>(getWindowSize());
+    const [windowSize, setWindowSize] = useState<WindowSizes>(getWindowSize());
 
     // Declare useEffect and handleResize functionality
     useEffect(() => {

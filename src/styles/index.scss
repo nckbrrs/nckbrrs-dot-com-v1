@@ -2,10 +2,12 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@100;200;300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100;200;300;400;500;600;700&display=swap');
 
-@import "./header.scss";
-@import "./footer.scss";
-@import "./home.scss";
-@import "./stuff.scss";
+@import './header.scss';
+@import './main.scss';
+@import './about.scss';
+@import './links.scss';
+@import './footer.scss';
+@import './home.scss';
 
 html, body {
   	margin: 0;
