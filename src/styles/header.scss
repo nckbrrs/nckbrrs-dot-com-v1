@@ -3,17 +3,13 @@
     flex-flow: row nowrap;
     justify-content: space-between;
     align-content: center;
-    // min-width: 500px;
+    width: 100%;
 
     .header-link {
         width: 50%;
         height: 100%;
         display: inline-flex;
         flex-flow: column nowrap;
-
-        &:hover {
-            cursor: pointer;
-        }
     }
 
     #text-col {
@@ -35,22 +31,28 @@
         justify-content: center;
 
         svg {
-            height: 100%;
+            height: 5rem;
             fill: #313131;
         }
     }
-
-    &.large, &.medium {
-        width: 100%;
-        height: 6rem;
-    }
-
+    
     &.small, &.mobile {
         justify-content: center;
-        height: 4.5rem;
 
         #logo-col {
             align-items: center;
+
+            svg {
+                width: 100%;
+                padding: 10px;
+            }
+        }
+    }
+
+    &.mobile {
+        #logo-col:hover {
+            cursor: pointer;
+            filter: url(#shadow);
         }
     }
 }
