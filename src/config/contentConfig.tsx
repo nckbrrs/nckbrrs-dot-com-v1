@@ -12,7 +12,7 @@ import ResumePDF from '../assets/images/resume.pdf';
 export const contentConfig = {
     home: {
         headerText: "nick barrs",
-        mainText: "i'm a software developer and musician living and working in Raleigh.",
+        mainText: "i'm a software developer and musician living and working in New York City.",
         socialLinks: [
             { 
                 "name": "appleMusic",
