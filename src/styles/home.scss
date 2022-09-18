@@ -210,14 +210,18 @@
         width: 100vw;
         padding-right: 0;
 
-        svg {
-            width: 6rem;
-            margin-bottom: 2rem;
-        }
+        #icon-row {
+            width: 25rem;
 
-        p {
-            display: none;
-        }
+            svg {
+                width: 6rem;
+                margin-bottom: 2rem;
+            }
+    
+            p {
+                display: none;
+            }
+        }   
     }
     
     &.left {
