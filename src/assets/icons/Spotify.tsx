@@ -1,6 +1,6 @@
-export default function SpotifyIcon() {
+export const SpotifyIcon = (size) => {
 	return (
-		<svg version="1.1" id="Artwork" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" >
+		<svg width={size} height={size} version="1.1" id="Artwork" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" >
 
 		<clipPath id="clipCircle">
 			<circle r="32" cx="32" cy="32"/>

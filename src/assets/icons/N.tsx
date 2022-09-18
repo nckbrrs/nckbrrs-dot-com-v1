@@ -1,6 +1,6 @@
-export default function N() {
+export const N = (size, style) => {
 	return (
-		<svg version="1.1" id="n-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 629 610" >
+		<svg style={{...style}} width={size} height={size} version="1.1" id="n-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 629 610" >
 
 		<defs>
 			<filter id="shadow">

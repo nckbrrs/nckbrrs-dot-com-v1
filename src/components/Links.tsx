@@ -1,5 +1,5 @@
 import React from "react";
-import { contentConfig } from "../../config/contentConfig";
+import { contentConfig } from "../config/contentConfig";
 
 const Links: React.FC = () => {
     return (

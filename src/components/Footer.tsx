@@ -1,7 +1,7 @@
 import React from "react";
-import useWindowSize from "../../assets/hooks/useWindowSize";
-import { contentConfig } from "../../config/contentConfig";
-import { MainContentTypes, WindowSizes } from "../../types/types";
+import useWindowSize from "../assets/hooks/useWindowSize";
+import { contentConfig } from "../config/contentConfig";
+import { MainContentTypes, WindowSizes } from "../types/types";
 
 interface FooterProps {
     contentToShow: MainContentTypes;

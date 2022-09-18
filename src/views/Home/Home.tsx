@@ -1,59 +1,55 @@
-import React, { useEffect, useState } from 'react';
-import Header from '../../components/Header';
-import Main from '../../components/Main';
-import Footer from '../../components/Footer';
+import React, { useState } from 'react';
 import useWindowSize from '../../assets/hooks/useWindowSize';
-import { MainContentTypes, WindowSizes } from '../../types/types';
+import { Arrow } from '../../assets/icons/Arrow';
+import { NounBubble } from '../../components/NounBubble';
+import { contentConfig } from '../../config/contentConfig';
 
 const Home: React.FC = () => {
-  const windowSize: WindowSizes = useWindowSize();
-  const [mainContentToShow, setMainContentToShow] = useState(MainContentTypes.About);
-  const [slideLeft, setSlideLeft] = useState(false);
-  const [slideRight, setSlideRight] = useState(false);
+  const [currentSide, setCurrentSide] = useState('left');
+  const windowSize = useWindowSize();
 
-  useEffect(() => {
-    if (windowSize !== WindowSizes.Mobile) {
-      setMainContentToShow(MainContentTypes.About);
-    }
-  }, [windowSize]);
-
-  const handleLogoClick = () => {
-    if (mainContentToShow === MainContentTypes.About) {
-      return;
-    }
-    
-    setSlideRight(true);
-    setSlideLeft(false);
-    setTimeout(() => setMainContentToShow(MainContentTypes.About), 333);
+  const onPress = () => {
+    setCurrentSide(currentSide === 'left' ? 'right' : 'left');
   }
 
-  const handleMyStuffClick = () => {
-    setSlideLeft(true);
-    setSlideRight(false);
-    setTimeout(() => setMainContentToShow(MainContentTypes.Links), 333);
-  };
-
-  const classNames = () => {
-    const classNames: string[] = [windowSize, 'slideInFromBelow'];
-    return classNames.join(' ');
-  }
-  
   return (
-    <div id="home" className={classNames()}>
-      <Header 
-        handleLogoClick={() => handleLogoClick()}
-      />
-      <Main
-        slideLeft={slideLeft}
-        slideRight={slideRight}
-        contentToShow={mainContentToShow}
-      />
-      <Footer
-        slideLeft={slideLeft}
-        slideRight={slideRight}
-        contentToShow={mainContentToShow} 
-        handleMyStuffClick={() => handleMyStuffClick()}
-      />
+    <div id="home" className={windowSize + ' ' + currentSide}>
+      <div id="left-side-with-arrow">
+        <div id="left-side">
+          <div id="name">
+            <p id="first-name">nick</p>
+            <p id="last-name">barrs</p>
+          </div>
+          <div id="about">
+            <div id="is-and-noun-bubble">
+              <p id="is-a">is a</p>
+              <div id="noun-bubble-wrapper">
+                <NounBubble/>
+              </div>
+            </div>
+            <p id="living-working">living and working in <span style={{whiteSpace: 'nowrap'}}>New York City.</span></p>
+          </div>
+        </div>
+        <div id="arrow">
+          <span onClick={onPress}>
+            {Arrow('5rem', {})}
+          </span>
+        </div>
+      </div>
+      <div id="icon-row-container">
+          <div id="icon-row">
+            { contentConfig['home'].socialLinks.map((link, i) => {
+              return (
+                <div className="icon">
+                  <div style={{borderRadius: 100}} onClick={() => window.location.href = link['href']}>
+                    { link['icon']('5rem') }
+                  </div>
+                  <p className="icon-name">{link['text']}</p>
+                </div>
+              ); 
+            })}
+        </div>
+      </div>
     </div>
   );
 }

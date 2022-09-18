@@ -1,8 +1,8 @@
 import React from "react";
-import N from "../../assets/icons/N";
-import useWindowSize from "../../assets/hooks/useWindowSize";
-import { contentConfig } from "../../config/contentConfig";
-import { WindowSizes } from "../../types/types";
+// import N from "../assets/icons/N";
+import useWindowSize from "../assets/hooks/useWindowSize";
+import { contentConfig } from "../config/contentConfig";
+import { WindowSizes } from "../types/types";
 
 interface HeaderProps {
     handleLogoClick: () => void
@@ -10,7 +10,7 @@ interface HeaderProps {
 
 const Header: React.FC<HeaderProps> = (props) => {
     const windowSize = useWindowSize();
-
+    
     return (
         <div id="header" className={windowSize}>
             {   [WindowSizes.Large, WindowSizes.Medium].includes(windowSize) &&
@@ -21,7 +21,7 @@ const Header: React.FC<HeaderProps> = (props) => {
                 </div>
             }
             <div id="logo-col" className="header-link" onClick={props.handleLogoClick}>
-                <N/>
+                {/* <N/> */}
             </div>
         </div>
     );
