@@ -100,6 +100,7 @@
             margin-right: 2.5rem;
 
             svg {
+                width: 5rem;
                 transition: 1.5s;
                 &:hover {
                     cursor: pointer;
@@ -203,6 +204,10 @@
             position: absolute;
             bottom: 1rem;
             align-items: flex-end;
+
+            svg {
+                width: 3rem;
+            }
         }
     }
 
@@ -227,7 +232,7 @@
     &.left {
         #left-side-with-arrow {
             #arrow {
-                left: calc(100vw - 8.5rem);
+                left: calc(100vw - 6.5rem);
             }
 
             #left-side {

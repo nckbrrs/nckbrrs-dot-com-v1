@@ -4,8 +4,3 @@ export enum WindowSizes {
     Small = 'small',
     Mobile = 'mobile'
 }
-
-export enum MainContentTypes {
-    About,
-    Links
-}

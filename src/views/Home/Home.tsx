@@ -32,7 +32,7 @@ const Home: React.FC = () => {
         </div>
         <div id="arrow">
           <span onClick={onPress}>
-            {Arrow('5rem', {})}
+            <Arrow/>
           </span>
         </div>
       </div>

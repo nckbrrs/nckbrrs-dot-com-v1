@@ -1,12 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;200;300;400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@100;200;300;400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100;200;300;400;500;600;700&display=swap');
-
-@import './header.scss';
-@import './main.scss';
-@import './about.scss';
-@import './links.scss';
-@import './footer.scss';
 @import './home.scss';
 
 html, body, #root {
@@ -15,6 +6,7 @@ html, body, #root {
     height: 100%;
     display: flex;
     overflow-x: hidden;
+    animation: fadeIn 0.75s;
 }
 
 * {
@@ -25,48 +17,7 @@ html, body, #root {
     0%   {opacity: 0;}
     100% {opacity: 1;}
 }
-
-@keyframes slideInFromBelow {
-    0%   {transform: translate(0px, 60px);}
-    60%  {transform: translate(0px, -15px);}
-    100% {transform: translate(0px, 0px);}
-}
-
-@keyframes slideOutToLeft {
-    100% {transform: translate(-500px, 0)}
-}
-
-@keyframes slideOutToRight {
-    100% {transform: translate(500px, 0)}
-}
-
-@keyframes slideInFromLeft {
-    0% {transform: translate(-500px, 0)}
-    100% {transform: translate(0px, 0px)}
-}
-
-@keyframes slideInFromRight {
-    0% {transform: translate(500px, 0)}
-    100% {transform: translate(0px, 0px)}
-}
-
-@keyframes moveInCircle {
-    0%, 100%   {transform: translate(calc(1 * -1px), calc(1 * 1px));}
-    13%  {transform: translate(calc(1 * -1.5px), calc(1 * 0px));}
-    25%  {transform: translate(calc(1 * -1px), calc(1 * -1px));}
-    38%  {transform: translate(calc(1 * 0px), calc(1 * -1.5px));}
-    50%  {transform: translate(calc(1 * 1px), calc(1 * -1px));}
-    63%  {transform: translate(calc(1 * 1.5px), calc(1 * 0px));}
-    75%  {transform: translate(calc(1 * 1px), calc(1 * 1px));}
-    88%  {transform: translate(calc(1 * 0px), calc(1 * 1.5px));}
-}
-
-@keyframes redToBlue {
-    from {background-color: #ee352e;}
-    to {background-color: #00933C;}
-}
-
-@keyframes mtaBackground {
+@keyframes nounBubbleBackground {
     3% { background-color: #0039a6; }
     10% {background-color: #ff6319;}
     13% {background-color: #ff6319;}
@@ -89,7 +40,7 @@ html, body, #root {
     100% { background-color: #0039a6; }
 }
 
-@keyframes slideOutToLeftNew {
+@keyframes nounBubbleLoop {
     58%  { transform: translate(0, 0) }
     78%  { transform: translate(-500px, 0) }
     79%  { transform: translate(0, -100px) }
