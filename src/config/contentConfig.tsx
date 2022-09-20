@@ -18,55 +18,55 @@ export const contentConfig = {
                 "name": "appleMusic",
                 "text": "MUSIC",
                 "href": "https://music.apple.com/us/artist/nick-barrs/1539845933",
-                "icon": size => AppleMusicIcon(size)
+                "icon": <AppleMusicIcon/>
             },
             {
                 "name": "spotify",
                 "text": "SPOTIFY",
                 "href": "https://open.spotify.com/artist/2ZXVOSBi1E69IxiGuX8ofU?si=cSD9lEXoTRyGvoWBxbHGWA",
-                "icon": size => SpotifyIcon(size)
+                "icon": <SpotifyIcon/>
             },
             {
                 "name": "youtube",
                 "text": "YOUTUBE",
                 "href": "https://www.youtube.com/channel/UC4PnMvHxARiaOhzw-99Q4JA",
-                "icon": size => YoutubeIcon(size)
+                "icon": <YoutubeIcon/>
             },
             {
                 "name": "twitter",
                 "text": "TWITTER",
                 "href": "https://www.twitter.com/nckbrrs",
-                "icon": size => TwitterIcon(size)
+                "icon": <TwitterIcon/>
             },
             {
                 "name": "instagram",
                 "text": "INSTAGRAM",
                 "href": "https://www.instagram.com/nckbrrs",
-                "icon": size => InstagramIcon(size)
+                "icon": <InstagramIcon/>
             },
             {
                 "name": "github",
                 "text": "GITHUB",
                 "href": "https://www.github.com/nckbrrs",
-                "icon": size => GitHubIcon(size)
+                "icon": <GitHubIcon/>
             },
             {
                 "name": "linkedin",
                 "text": "LINKEDIN",
                 "href": "https://www.linkedin.com/in/nckbrrs",
-                "icon": size => LinkedinIcon(size)
+                "icon": <LinkedinIcon/>
             },
             {
                 "name": "resume",
                 "text": "RESUME",
                 "href": ResumePDF,
-                "icon": size => ResumeIcon(size)
+                "icon": <ResumeIcon/>
             },
             {
                 "name": "email",
                 "text": "CONTACT",
                 "href": "mailto:nckbrrs@icloud.com",
-                "icon": size => EmailIcon(size)
+                "icon": <EmailIcon/>
             }
         ]
     }

@@ -38,11 +38,11 @@ const Home: React.FC = () => {
       </div>
       <div id="icon-row-container">
           <div id="icon-row">
-            { contentConfig['home'].socialLinks.map((link, i) => {
+            { contentConfig['home'].socialLinks.map((link) => {
               return (
-                <div className="icon">
+                <div className="icon" key={`${link.name}-icon`}>
                   <div style={{borderRadius: 100}} onClick={() => window.location.href = link['href']}>
-                    { link['icon']('5rem') }
+                    { link['icon'] }
                   </div>
                   <p className="icon-name">{link['text']}</p>
                 </div>

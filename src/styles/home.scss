@@ -99,7 +99,7 @@
             margin-right: 2.5rem;
 
             svg {
-                width: 5rem;
+                width: 80px;
                 transition: 1.5s;
                 &:hover {
                     cursor: pointer;
@@ -131,6 +131,7 @@
                 svg {
                     transition: 0.3s;
                     padding: 4px;
+                    width: 80px;
                 }
     
                 .icon-name {
@@ -209,7 +210,7 @@
             align-items: flex-end;
 
             svg {
-                width: 3rem;
+                width: 48px;
             }
         }
     }
@@ -222,7 +223,7 @@
             width: 25rem;
 
             svg {
-                width: 6rem;
+                width: 96px;
                 margin-bottom: 2rem;
             }
     
