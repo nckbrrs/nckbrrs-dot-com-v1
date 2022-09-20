@@ -24,7 +24,6 @@
                 justify-content: flex-start;
                 font-size: 12rem;
                 line-height: 12rem;
-                font-size: 500;
 
                 #first-name {
                     z-index: 2;
@@ -200,6 +199,10 @@
     }
 
     #left-side-with-arrow {
+        #left-side #about {
+            width: 90vw;
+        }
+
         #arrow {
             position: absolute;
             bottom: 1rem;
