@@ -1,3 +1,4 @@
-This repo has been archived
+# Overview
+V1 code for my personal website, nckbrrs.com
 
-Please see https://github.com/nckbrrs/nckbrrs-dot-com for my current website's code.
+The current code can be found [here](https://github.com/nckbrrs/nckbrrs-dot-com).
